@@ -474,9 +474,17 @@ a.logo-tile:hover { transform: translateY(-2px); background: color-mix(in srgb, 
 .avatar.sm { width: 42px; height: 42px; font-size: .95rem; }
 .social.telegram:hover { background: #229ed9; border-color: #229ed9; color: #fff; }
 
-/* study relevance tiles */
-.domains { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 16px 0 4px; }
-.domain { display: flex; flex-direction: column; gap: 4px; padding: 12px; border-radius: 12px; background: var(--panel); border: 1px solid var(--line);
-  border-left: 3px solid var(--accent); font-size: .86rem; }
-.domain strong { font-size: .9rem; } .domain span { color: var(--muted); }
-@media (max-width: 760px) { .domains { grid-template-columns: 1fr; } }
+/* case study section */
+.study-grid { display: grid; grid-template-columns: 1.1fr 1fr; gap: 20px; align-items: stretch; }
+.study-card { margin: 0; display: flex; flex-direction: column; gap: 6px; }
+.study-card h3 { margin: 2px 0 0; font-size: 1.25rem; }
+.study-card .facts { margin-top: 10px; }
+.study-card .tl-detail { flex: none; }
+.study-card > .btn { align-self: flex-start; margin-top: auto; }
+.study-links { margin-top: 12px; }
+.domains { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 20px; }
+.domain { padding: 22px; border-radius: var(--radius); background: var(--panel); border: 1px solid var(--line); box-shadow: var(--shadow); }
+.domain h3 { margin: 10px 0 6px; font-size: 1.08rem; }
+.domain p { margin: 0; color: var(--muted); font-size: .95rem; line-height: 1.55; }
+.domain-ic { display: grid; place-items: center; width: 40px; height: 40px; border-radius: 11px; background: var(--note); color: var(--accent); font-size: 1.2rem; font-weight: 700; }
+@media (max-width: 960px) { .study-grid, .domains { grid-template-columns: 1fr; } }
