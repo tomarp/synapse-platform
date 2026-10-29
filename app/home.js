@@ -1,6 +1,6 @@
 // Start page: what the platform does, the tasks (live previews, one-minute try-outs), the SYNAPSE study,
 // how it works, privacy, funders and citation.
-import { BIBTEX, CITATION, doiUrl, PROJECT_FULL, REFERENCES } from './info.js';
+import { APP_VERSION, BIBTEX, CITATION, doiUrl, PROJECT_FULL, REFERENCES, RIS, SOFTWARE_DOI, SOFTWARE_VERSION_DOI } from './info.js';
 import { footer, nav } from './nav.js';
 import { socialLinks } from './social.js';
 import { COLOURS, logoTiles, STROOP_EMOTIONAL, VISUAL_COUNT, VISUAL_SHAPE } from './stimuli.js';
@@ -164,20 +164,37 @@ export function authorCard(author) {
         socialLinks(author))));
 }
 
+const COPY_ICON = '<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M8 3h9a2 2 0 0 1 2 2v11h-2V5H8V3Zm-3 4h9a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2Zm0 2v11h9V9H5Z"/></svg>';
+const CHECK_ICON = '<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M9.5 16.2 5.3 12l-1.4 1.4 5.6 5.6L20.1 8.4 18.7 7z"/></svg>';
+
+/** Citation of the software: Zenodo DOI badge, APA / BibTeX / RIS, copy button inside the frame. */
 export function citeCard() {
-  const box = h('pre', { class: 'cite-box' }, CITATION);
-  let mode = 'text';
-  const tab = (key, label) => h('button', { class: `tab ${key === mode ? 'on' : ''}`, onclick: (e) => {
-    mode = key; box.textContent = key === 'text' ? CITATION : BIBTEX;
-    e.currentTarget.parentElement.querySelectorAll('.tab').forEach((x) => x.classList.toggle('on', x === e.currentTarget));
-  } }, label);
-  const copy = h('button', { class: 'btn small primary', onclick: (e) => {
-    navigator.clipboard?.writeText(box.textContent);
-    e.currentTarget.textContent = '✓ Copied';
-  } }, 'Copy');
+  const FORMATS = { apa: ['APA', CITATION], bibtex: ['BibTeX', BIBTEX], ris: ['RIS', RIS] };
+  const text = h('pre', { class: 'cite-text' }, CITATION);
+  const copy = h('button', { class: 'copy-btn', title: 'Copy citation', 'aria-label': 'Copy citation' });
+  copy.innerHTML = COPY_ICON;
+  const tip = h('span', { class: 'copy-tip' }, 'Copied');
+  copy.addEventListener('click', async () => {
+    try { await navigator.clipboard.writeText(text.textContent); } catch {
+      const r = document.createRange(); r.selectNodeContents(text); getSelection().removeAllRanges(); getSelection().addRange(r); document.execCommand('copy');
+    }
+    copy.innerHTML = CHECK_ICON; copy.classList.add('done'); tip.classList.add('show');
+    setTimeout(() => { copy.innerHTML = COPY_ICON; copy.classList.remove('done'); tip.classList.remove('show'); }, 1600);
+  });
+  const tabs = h('div', { class: 'tabs', role: 'tablist' }, ...Object.entries(FORMATS).map(([k, [label, value]]) =>
+    h('button', { class: `tab ${k === 'apa' ? 'on' : ''}`, role: 'tab', onclick: (e) => {
+      text.textContent = value;
+      tabs.querySelectorAll('.tab').forEach((x) => x.classList.toggle('on', x === e.currentTarget));
+    } }, label)));
+  const badge = h('a', { class: 'doi-badge', href: doiUrl(SOFTWARE_DOI), target: '_blank', rel: 'noopener', title: 'Zenodo record (all versions)' },
+    h('span', {}, 'DOI'), h('span', {}, SOFTWARE_DOI));
   return h('div', { class: 'card cite-card' },
-    h('div', { class: 'row space' }, h('div', { class: 'card-label' }, 'Cite this software'), h('div', { class: 'tabs' }, tab('text', 'Text'), tab('bibtex', 'BibTeX'))),
-    box, h('div', { class: 'row space' }, h('span', { class: 'muted small' }, 'Please also cite the dataset and protocol below.'), copy));
+    h('div', { class: 'row space' }, h('div', { class: 'card-label' }, 'Cite this software'), badge),
+    h('div', { class: 'row space cite-tools' }, tabs, h('a', { class: 'small', href: 'CITATION.cff', download: 'CITATION.cff' }, '⬇ CITATION.cff')),
+    h('div', { class: 'cite-frame' }, text, copy, tip),
+    h('p', { class: 'muted small cite-foot' }, `Citing the exact version you used (v${APP_VERSION})? Use `,
+      h('a', { href: doiUrl(SOFTWARE_VERSION_DOI), target: '_blank', rel: 'noopener' }, SOFTWARE_VERSION_DOI),
+      '. Please also cite the dataset and protocol below.'));
 }
 
 export function referenceList() {

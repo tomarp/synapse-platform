@@ -18,6 +18,7 @@ export const AUTHOR = {
 };
 
 export const SOFTWARE_DOI = '10.5281/zenodo.23768059';          // concept DOI: always resolves to the latest version
+export const SOFTWARE_VERSION_DOI = '10.5281/zenodo.23768060';  // DOI of exactly this version (update with each release)
 export const CITATION = `Tomar, P. (2026). SYNAPSE experiment platform (Version ${APP_VERSION}) [Computer software]. Zenodo. https://doi.org/${SOFTWARE_DOI}`;
 
 export const BIBTEX = `@software{tomar_2026_synapse_platform,
@@ -27,9 +28,18 @@ export const BIBTEX = `@software{tomar_2026_synapse_platform,
   year    = {2026},
   license = {MIT},
   publisher = {Zenodo},
-  doi     = {${SOFTWARE_DOI}},
-  url     = {https://doi.org/${SOFTWARE_DOI}}
+  doi     = {${SOFTWARE_DOI}}
 }`;
+
+export const RIS = `TY  - COMP
+AU  - Tomar, Puneet
+TI  - SYNAPSE experiment platform
+ET  - ${APP_VERSION}
+PY  - 2026
+PB  - Zenodo
+DO  - ${SOFTWARE_DOI}
+UR  - https://doi.org/${SOFTWARE_DOI}
+ER  - `;
 
 const SYNAPSE_AUTHORS = 'Tomar, P., Dave, T., Wargocki, P., & Pisello, A. L.';
 
