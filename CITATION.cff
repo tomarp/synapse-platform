@@ -6,6 +6,14 @@ version: "2.2.0"
 date-released: "2026-10-29"
 license: MIT
 url: "https://synapse.ptomar.com"
+doi: "10.5281/zenodo.23768059"
+identifiers:
+  - type: doi
+    value: "10.5281/zenodo.23768059"
+    description: "Concept DOI (all versions)"
+  - type: doi
+    value: "10.5281/zenodo.23768060"
+    description: "Version 2.2.0"
 abstract: "SYNAPSE (Synergistic Neurophysiological Assessment of Perception in Sensory Environments). Browser application for cognitive-task sessions (n-back, Stroop, flanker, visual counting and shape comparison) with questionnaires, rest baselines and soundscapes; no server, local data export; includes the protocol of the SYNAPSE study."
 authors:
   - family-names: "Tomar"

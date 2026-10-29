@@ -11,7 +11,9 @@ The built-in protocol **SYNAPSE full session** reproduces one session of the SYN
 Denmark, June 2025) with its tasks, trial numbers, timings and questionnaires. The SYNAPSE dataset was recorded with
 it (see *Relation to the SYNAPSE study*).
 
-**Live:** https://synapse.ptomar.com · publishing steps: `PUBLISHING.md`
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23768059.svg)](https://doi.org/10.5281/zenodo.23768059)
+
+**Live:** https://synapse.ptomar.com · **DOI:** [10.5281/zenodo.23768059](https://doi.org/10.5281/zenodo.23768059) (all versions; v2.2.0: [10.5281/zenodo.23768060](https://doi.org/10.5281/zenodo.23768060)) · publishing steps: `PUBLISHING.md`
 
 ## Quick start
 
@@ -207,6 +209,8 @@ tests/                     unit and browser tests
 - **Dataset** — Tomar, P., Dave, T., Wargocki, P., & Pisello, A. L. (2026). *SYNAPSE: EEG, wrist physiology, facial thermal
   imaging, indoor environment and cognitive performance of adults working under warm and cool LED lighting and urban
   soundscapes* (Version 1.0.0) [Data set]. Zenodo. https://doi.org/10.5281/zenodo.23458777
+- **Software** (this platform) — Tomar, P. (2026). *SYNAPSE experiment platform* (Version 2.2.0) [Computer software].
+  Zenodo. https://doi.org/10.5281/zenodo.23768059
 - **Protocol** — Tomar, P., Dave, T., Wargocki, P., & Pisello, A. L. (2026). *Multimodal assessment of cognitive performance,
   physiology and perceived indoor environment under warm and cool LED lighting and urban soundscapes (SYNAPSE)*.
   protocols.io. https://doi.org/10.17504/protocols.io.m7vznm25rvx1/v1

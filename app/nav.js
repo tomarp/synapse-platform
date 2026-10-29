@@ -51,7 +51,7 @@ export function footer() {
       col('Resources', a('README.md', 'Documentation', true), a('protocols/synapse_full_session.json', 'Example protocol file', true), a('CHANGELOG.md', 'Changelog', true),
         a('CITATION.cff', 'Citation file', true), a('#/about', 'Privacy and media credits')),
       col('Research', a('#/cite', 'Cite the platform'),
-        ...REFERENCES.filter((r) => r.kind !== 'Software').map((r) => (r.doi ? a(doiUrl(r.doi), `SYNAPSE ${r.kind.toLowerCase()} (${r.where})`, true)
+        ...REFERENCES.map((r) => (r.doi ? a(doiUrl(r.doi), `SYNAPSE ${r.kind.toLowerCase()} (${r.where})`, true)
           : h('span', { class: 'muted' }, `SYNAPSE ${r.kind.toLowerCase()} (${r.where}, forthcoming)`))),
         a('https://cordis.europa.eu/project/id/101073357', 'MuSIC doctoral network', true)),
       col('Contact', h('span', {}, AUTHOR.name), h('span', { class: 'muted' }, 'University of Perugia · DTU'),

@@ -17,14 +17,18 @@ export const AUTHOR = {
   linkedin: 'https://www.linkedin.com/in/tomarp/',
 };
 
-export const CITATION = `Tomar, P. (2026). SYNAPSE experiment platform (Version ${APP_VERSION}) [Computer software].`;
+export const SOFTWARE_DOI = '10.5281/zenodo.23768059';          // concept DOI: always resolves to the latest version
+export const CITATION = `Tomar, P. (2026). SYNAPSE experiment platform (Version ${APP_VERSION}) [Computer software]. Zenodo. https://doi.org/${SOFTWARE_DOI}`;
 
 export const BIBTEX = `@software{tomar_2026_synapse_platform,
   author  = {Tomar, Puneet},
   title   = {{SYNAPSE} experiment platform},
   version = {${APP_VERSION}},
   year    = {2026},
-  license = {MIT}
+  license = {MIT},
+  publisher = {Zenodo},
+  doi     = {${SOFTWARE_DOI}},
+  url     = {https://doi.org/${SOFTWARE_DOI}}
 }`;
 
 const SYNAPSE_AUTHORS = 'Tomar, P., Dave, T., Wargocki, P., & Pisello, A. L.';
@@ -44,7 +48,7 @@ export const REFERENCES = [
     note: 'Step-by-step procedure of the SYNAPSE sessions, including this platform.',
   },
   {
-    kind: 'Software', where: 'this platform', doi: null,
+    kind: 'Software', where: 'Zenodo', doi: SOFTWARE_DOI,
     text: CITATION,
     note: 'Code under the MIT licence.',
   },
