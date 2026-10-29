@@ -15,6 +15,7 @@ export const AUTHOR = {
   orcid: '0000-0002-5168-5471',
   email: 'puneet.tomar@proton.me',
   linkedin: 'https://www.linkedin.com/in/tomarp/',
+  telegram: 'https://t.me/tomap',
 };
 
 export const SOFTWARE_DOI = '10.5281/zenodo.23768059';          // Zenodo DOI; always resolves to the latest version

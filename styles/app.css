@@ -460,3 +460,14 @@ a.logo-tile:hover { transform: translateY(-2px); background: color-mix(in srgb, 
 .cite-card.kind-software { border-top: 3px solid var(--accent-2); }
 
 .hero h1 .grad-text { white-space: nowrap; }
+
+/* three citation cards in a row; author frame in the footer */
+.cite-grid.three { grid-template-columns: repeat(3, 1fr); }
+@media (max-width: 1100px) { .cite-grid.three { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 760px) { .cite-grid.three { grid-template-columns: 1fr; } }
+.f-grid { grid-template-columns: 1.5fr 1fr 1fr 1fr 1.35fr; }
+.f-author-card { display: flex; gap: 12px; align-items: center; padding: 12px; border: 1px solid #222b45; border-radius: 12px; background: #10162b; margin-bottom: 10px; }
+.f-author-card div:last-child { display: flex; flex-direction: column; gap: 2px; font-size: .84rem; }
+.f-author-card strong { color: #fff; font-size: .95rem; }
+.avatar.sm { width: 42px; height: 42px; font-size: .95rem; }
+.social.telegram:hover { background: #229ed9; border-color: #229ed9; color: #fff; }

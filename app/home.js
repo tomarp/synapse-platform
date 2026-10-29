@@ -81,7 +81,7 @@ export function renderHome(root, { author, paused }) {
         h('div', { class: 'hero-text reveal' },
           h('p', { class: 'eyebrow' }, h('span', { class: 'pulse' }), 'Open research software · SYNAPSE project'),
           h('p', { class: 'acronym' }, ...acronym(PROJECT_FULL)),
-          h('h1', {}, 'Design, run and share cognitive experiments ', h('span', { class: 'grad-text' }, 'in any browser.')),
+          h('h1', {}, 'Design, run and share cognitive experiments, ', h('span', { class: 'grad-text' }, 'privately and locally.')),
           h('p', { class: 'lead' }, 'Assemble a session from established task paradigms and questionnaires, run it on any laptop, and export ',
             'analysis-ready data. No installation, no server, and no participant data leaving your computer.'),
           h('div', { class: 'row hero-cta' },
@@ -199,11 +199,9 @@ export const referenceList = () => h('div', { class: 'cite-grid' }, ...OUTPUTS.s
 
 function citeSection(author) {
   return h('section', { class: 'band alt', id: 'cite' },
-    h('div', { class: 'section-head reveal' }, h('p', { class: 'kicker' }, 'Credits'), h('h2', {}, 'Author, citation and related outputs'),
-      h('p', { class: 'muted' }, 'The platform, the SYNAPSE dataset and the experimental protocol are published openly and can be cited separately.')),
-    h('div', { class: 'cite-grid reveal' }, authorCard(author), citeCard()),
-    h('h3', { class: 'reveal' }, 'Related research outputs'),
-    h('div', { class: 'reveal' }, referenceList()));
+    h('div', { class: 'section-head reveal' }, h('p', { class: 'kicker' }, 'Open science'), h('h2', {}, 'Cite SYNAPSE'),
+      h('p', { class: 'muted' }, 'The platform, the dataset and the experimental protocol are published openly. Please cite the ones you use.')),
+    h('div', { class: 'cite-grid three reveal' }, citeCard(), ...OUTPUTS.slice(1).map((o) => citationCard(o))));
 }
 
 /** "SYnergistic Neurophysiological …" with the letters of the acronym highlighted. */

@@ -20,7 +20,7 @@
 - **Logo**: the word SYNAPSE as a gradient wordmark, with the tagline “experiment platform” underneath spanning its width
   (browser-tab icon: `media/logos/synapse_icon.svg`).
 - **Public README** with wordmark, badges and screenshots; technical documentation moved to `docs/documentation.md`.
-- **Headline** "Design, run and share cognitive experiments in any browser"; citation frames of equal height that scroll inside.
+- **Headline** "Design, run and share cognitive experiments, privately and locally"; author card in the footer (with Telegram); citation frames of equal height that scroll inside.
 - **Fixes**: a Skip/Back pressed while a step was still loading (e.g. a questionnaire file) could be lost; the abort
   signal is now created first and every step ends reliably.
 

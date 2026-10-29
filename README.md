@@ -2,7 +2,7 @@
 
 <img src="docs/images/synapse-wordmark.svg" alt="SYNAPSE experiment platform" width="460">
 
-### Design, run and share cognitive experiments in any browser
+### Design, run and share cognitive experiments, privately and locally
 
 *SYNAPSE: Synergistic Neurophysiological Assessment of Perception in Sensory Environments*
 
@@ -103,7 +103,7 @@ GitHub's **Cite this repository** button (right sidebar) reads the same informat
 **Puneet Tomar**: Environmental Applied Physics Lab at CIRIAF, University of Perugia, and Department of Environmental
 and Resource Engineering, Technical University of Denmark.
 
-[ORCID](https://orcid.org/0000-0002-5168-5471) · [E-mail](mailto:puneet.tomar@proton.me) · [LinkedIn](https://www.linkedin.com/in/tomarp/)
+[ORCID](https://orcid.org/0000-0002-5168-5471) · [E-mail](mailto:puneet.tomar@proton.me) · [LinkedIn](https://www.linkedin.com/in/tomarp/) · [Telegram](https://t.me/tomap)
 
 Questions, ideas and bug reports are welcome as [GitHub issues](https://github.com/tomarp/synapse-platform/issues).
 

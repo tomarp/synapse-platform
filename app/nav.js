@@ -54,7 +54,11 @@ export function footer() {
         ...REFERENCES.map((r) => (r.doi ? a(doiUrl(r.doi), `SYNAPSE ${r.kind.toLowerCase()} (${r.where})`, true)
           : h('span', { class: 'muted' }, `SYNAPSE ${r.kind.toLowerCase()} (${r.where}, forthcoming)`))),
         a('https://cordis.europa.eu/project/id/101073357', 'MuSIC doctoral network', true)),
-      col('Contact', h('span', {}, AUTHOR.name), h('span', { class: 'muted' }, 'University of Perugia · DTU'),
+      h('div', { class: 'f-col f-author' }, h('h4', {}, 'Author'),
+        h('div', { class: 'f-author-card' },
+          h('div', { class: 'avatar sm' }, AUTHOR.name.split(' ').map((w) => w[0]).join('')),
+          h('div', {}, h('strong', {}, AUTHOR.name),
+            h('span', { class: 'muted' }, 'CIRIAF, University of Perugia'), h('span', { class: 'muted' }, 'Technical University of Denmark'))),
         socialLinks(AUTHOR, { size: 'sm' }))),
     h('div', { class: 'f-funding' }, h('img', { src: 'media/logos/eu_funded_dark.png', alt: 'Funded by the European Union' }), h('p', {}, FUNDING)),
     h('div', { class: 'f-bottom' },
