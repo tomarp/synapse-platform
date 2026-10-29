@@ -1,0 +1,180 @@
+{
+  "id": "T1_ieq",
+  "title": "Indoor environment right now (T1)",
+  "description": "Please respond to each question based on your current feelings and perceptions of the environment and situations around you. Your insights will help us gain a better understanding of your perspectives and experiences.",
+  "source": "converted from a Google Form definition",
+  "sections": [
+    {
+      "title": "THERMAL",
+      "description": "",
+      "items": [
+        {
+          "id": "thermal_sensation",
+          "text": "1. What is your thermal sensation?",
+          "type": "dropdown",
+          "options": [
+            "1: Cold",
+            "2: Cool",
+            "3: Neutral",
+            "4: Warm",
+            "5: Hot"
+          ],
+          "required": true
+        },
+        {
+          "id": "thermal_satisfaction",
+          "text": "2. How satisfied are you with the thermal environment?",
+          "type": "dropdown",
+          "options": [
+            "1: Very dissatisfied",
+            "2: Dissatisfied",
+            "3: Neutral",
+            "4: Satisfied",
+            "5: Very satisfied"
+          ],
+          "required": true
+        },
+        {
+          "id": "thermal_preference",
+          "text": "3. Would you prefer to be:",
+          "type": "dropdown",
+          "options": [
+            "Cooler",
+            "No Change",
+            "Warmer"
+          ],
+          "required": true
+        }
+      ]
+    },
+    {
+      "title": "AIR-QUALITY",
+      "description": "",
+      "items": [
+        {
+          "id": "air_quality_assessment",
+          "text": "1. How do you assess the air quality of the room?",
+          "type": "dropdown",
+          "options": [
+            "1: Very bad",
+            "2: Bad",
+            "3: Neutral",
+            "4: Good",
+            "5: Very good"
+          ],
+          "required": true
+        },
+        {
+          "id": "air_quality_satisfaction",
+          "text": "2. How satisfied are you with the air quality?",
+          "type": "dropdown",
+          "options": [
+            "1: Very dissatisfied",
+            "2: Dissatisfied",
+            "3: Neutral",
+            "4: Satisfied",
+            "5: Very satisfied"
+          ],
+          "required": true
+        },
+        {
+          "id": "air_movement_preference",
+          "text": "3. Would you prefer",
+          "type": "dropdown",
+          "options": [
+            "Less air movement",
+            "No change",
+            "More air movement"
+          ],
+          "required": true
+        }
+      ]
+    },
+    {
+      "title": "VISUAL",
+      "description": "",
+      "items": [
+        {
+          "id": "light_assessment",
+          "text": "1. How do you assess the light environment of the room?",
+          "type": "dropdown",
+          "options": [
+            "1: Bright",
+            "2: Slightly bright",
+            "3: Neutral",
+            "4: Slightly dark",
+            "5: Dark"
+          ],
+          "required": true
+        },
+        {
+          "id": "light_satisfaction",
+          "text": "2. How satisfied are you with the light condition?",
+          "type": "dropdown",
+          "options": [
+            "1: Very dissatisfied",
+            "2: Dissatisfied",
+            "3: Neutral",
+            "4: Satisfied",
+            "5: Very satisfied"
+          ],
+          "required": true
+        },
+        {
+          "id": "light_preference",
+          "text": "3. Would you prefer the lighting condition to be",
+          "type": "dropdown",
+          "options": [
+            "Brighter",
+            "No change",
+            "Dimmer"
+          ],
+          "required": true
+        }
+      ]
+    },
+    {
+      "title": "ACOUSTICS",
+      "description": "",
+      "items": [
+        {
+          "id": "acoustic_assessment",
+          "text": "1. How do you assess the acoustics of the room?",
+          "type": "dropdown",
+          "options": [
+            "1: Very noisy",
+            "2: Noisy",
+            "3: Neutral",
+            "4: Quiet",
+            "5: Very quiet"
+          ],
+          "required": true
+        },
+        {
+          "id": "acoustic_satisfaction",
+          "text": "2. How satisfied are you with the acoustics?",
+          "type": "dropdown",
+          "options": [
+            "1: Very dissatisfied",
+            "2: Dissatisfied",
+            "3: Neutral",
+            "4: Satisfied",
+            "5: Very satisfied"
+          ],
+          "required": true
+        },
+        {
+          "id": "acoustic_preference",
+          "text": "3. Would you prefer the acoustic environment to be…",
+          "type": "dropdown",
+          "options": [
+            "Louder",
+            "No change",
+            "Quiter"
+          ],
+          "required": true
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,493 @@
+{
+  "id": "T0_pre_session",
+  "title": "Pre-session questionnaire (T0)",
+  "description": "",
+  "source": "converted from a Google Form definition",
+  "sections": [
+    {
+      "title": "Instructions:",
+      "description": "There is no right or wrong answer\nBe honest and avoid discussing answers with other participant.\nAll responses are anonymous and confidential.",
+      "items": []
+    },
+    {
+      "title": "SECTION A:",
+      "description": "This section ask question realted your MEDICAL condition.",
+      "items": [
+        {
+          "id": "health_hearing_problem",
+          "text": "1. Do you have any known hearing problems (e.g., difficulty hearing sounds/speech)?",
+          "type": "single_choice",
+          "options": [
+            "No",
+            "Yes"
+          ],
+          "required": true
+        },
+        {
+          "id": "health_vision_problem",
+          "text": "2. Do you have any known vision problems (e.g., blurry vision, color blindness)?",
+          "type": "single_choice",
+          "options": [
+            "No",
+            "Yes"
+          ],
+          "required": true
+        },
+        {
+          "id": "health_neurological_condition",
+          "text": "3. Do you have any neurological (brain related) conditions (e.g., epilepsy, migraines)?",
+          "type": "single_choice",
+          "options": [
+            "No",
+            "Yes"
+          ],
+          "required": true
+        },
+        {
+          "id": "health_medication",
+          "text": "4. Are you currently taking any medications that could affect your mood or thinking?",
+          "type": "single_choice",
+          "options": [
+            "No",
+            "Yes"
+          ],
+          "required": true
+        }
+      ]
+    },
+    {
+      "title": "SECTION B",
+      "description": "This section assess different aspects of your mental, physical, and emotional ENERGY levels.",
+      "items": []
+    },
+    {
+      "title": "Mental Energy",
+      "description": "",
+      "items": [
+        {
+          "id": "mental_alert_focused_now",
+          "text": "1. Do you feel mentally alert and focused right now?",
+          "type": "dropdown",
+          "options": [
+            "Yes",
+            "No"
+          ],
+          "required": true
+        },
+        {
+          "id": "mental_energy",
+          "text": "2. How would you rate your current level of mental energy?",
+          "type": "dropdown",
+          "options": [
+            "Very Low",
+            "Low",
+            "Moderate",
+            "High",
+            "Very High"
+          ],
+          "required": true
+        },
+        {
+          "id": "concentration_difficulty_freq",
+          "text": "3. How often do you find it difficult to concentrate on tasks?",
+          "type": "dropdown",
+          "options": [
+            "Never",
+            "Rarely",
+            "Sometimes",
+            "Often",
+            "Always"
+          ],
+          "required": true
+        }
+      ]
+    },
+    {
+      "title": "Physical Energy",
+      "description": "",
+      "items": [
+        {
+          "id": "physically_ready",
+          "text": "4. Do you feel physically active and ready to engage in activities?",
+          "type": "dropdown",
+          "options": [
+            "Yes",
+            "No"
+          ],
+          "required": true
+        },
+        {
+          "id": "physical_energy",
+          "text": "5. How would you rate your current level of physical energy?",
+          "type": "dropdown",
+          "options": [
+            "Very Low",
+            "Low",
+            "Moderate",
+            "High",
+            "Very High"
+          ],
+          "required": true
+        },
+        {
+          "id": "fatigue_during_day_freq",
+          "text": "6. How often do you feel tired or fatigued during the day?",
+          "type": "dropdown",
+          "options": [
+            "Never",
+            "Rarely",
+            "Sometimes",
+            "Often",
+            "Always"
+          ],
+          "required": true
+        }
+      ]
+    },
+    {
+      "title": "Emotional Energy",
+      "description": "",
+      "items": [
+        {
+          "id": "positive_motivated_now",
+          "text": "7. Do you feel positive and motivated right now?",
+          "type": "dropdown",
+          "options": [
+            "Yes",
+            "No"
+          ],
+          "required": true
+        },
+        {
+          "id": "emotional_energy",
+          "text": "8. How would you rate your current emotional energy?",
+          "type": "dropdown",
+          "options": [
+            "Very Low",
+            "Low",
+            "Moderate",
+            "High",
+            "Very High"
+          ],
+          "required": true
+        },
+        {
+          "id": "overwhelmed_stressed_freq",
+          "text": "9. How often do you feel overwhelmed or stressed?",
+          "type": "dropdown",
+          "options": [
+            "Never",
+            "Rarely",
+            "Sometimes",
+            "Often",
+            "Always"
+          ],
+          "required": true
+        }
+      ]
+    },
+    {
+      "title": "SECTION C",
+      "description": "This section contains questions related to your ROUTINE during past 24 hours.",
+      "items": [
+        {
+          "id": "clothing_items",
+          "text": "1. Which of the following clothing items creates your wearing?  (Select each that applies)",
+          "type": "checkboxes",
+          "options": [
+            "Undergarments",
+            "T-shirt or short-sleeve shirt",
+            "T-shirt or long-sleeve shirt",
+            "Shorts",
+            "Cotton or synthetic trousers",
+            "Denim jeans",
+            "Hoodie",
+            "Sweatshirt",
+            "Socks",
+            "Shoes",
+            "Jacket",
+            "Skirt"
+          ],
+          "required": true
+        },
+        {
+          "id": "caffeine_daily",
+          "text": "2. Do you consume caffeine everyday",
+          "type": "single_choice",
+          "options": [
+            "Yes",
+            "No"
+          ],
+          "required": true
+        },
+        {
+          "id": "caffeine_last_intake",
+          "text": "3. When was the last time you consumed caffeine today?\nBreakfast if morning session, Lunch if afternoon session",
+          "type": "single_choice",
+          "options": [
+            "I haven't consumed caffeine today",
+            "Less than 30 minutes ago",
+            "30 minutes to 1 hour ago",
+            "1 to 3 hours ago",
+            "More than 3 hours ago"
+          ],
+          "required": true
+        },
+        {
+          "id": "meal_before_session",
+          "text": "4. Did you have breakfast or lunch today?",
+          "type": "single_choice",
+          "options": [
+            "Yes, I usually eat meals.",
+            "No, I usually do not eat meals.",
+            "Yes, but I usually do not eat meals.",
+            "No, but I usually do eat meals."
+          ],
+          "required": true
+        },
+        {
+          "id": "cold_symptom_severity",
+          "text": "5. How would you rate the severity of your current symptoms related to feeling unwell or having a cold?",
+          "type": "single_choice",
+          "options": [
+            "Not at all",
+            "Slightly",
+            "Moderately",
+            "Very Much",
+            "Extremely"
+          ],
+          "required": true
+        },
+        {
+          "id": "smell_change",
+          "text": "6. If you've noticed a change from normal, how much is your nose or sense of smell affected?",
+          "type": "single_choice",
+          "options": [
+            "Not affected at all",
+            "More sensitive than usual",
+            "Less sensitive than usual"
+          ],
+          "required": true
+        }
+      ]
+    },
+    {
+      "title": "SECTION D",
+      "description": "Your Sleep Quality Assessment during last night",
+      "items": [
+        {
+          "id": "sleep_duration_h",
+          "text": "1. Sleep duration last night: ___ hours",
+          "type": "text",
+          "required": true
+        },
+        {
+          "id": "sleep_quality",
+          "text": "2. How was your Sleep quality last night?",
+          "type": "single_choice",
+          "options": [
+            "Very Poor",
+            "Poor",
+            "Neutral",
+            "Good",
+            "Very Good"
+          ],
+          "required": true
+        },
+        {
+          "id": "deep_sleep",
+          "text": "3. Did you have a deep sleep last night?",
+          "type": "single_choice",
+          "options": [
+            "Yes",
+            "No"
+          ],
+          "required": true
+        },
+        {
+          "id": "tired_on_waking",
+          "text": "4. Did you feel tired when you woke up this morning?",
+          "type": "single_choice",
+          "options": [
+            "Yes",
+            "No"
+          ],
+          "required": true
+        },
+        {
+          "id": "woke_several_times",
+          "text": "5. Did you wake up several times during the night?",
+          "type": "single_choice",
+          "options": [
+            "Yes",
+            "No"
+          ],
+          "required": true
+        },
+        {
+          "id": "insufficient_sleep",
+          "text": "6. Do you feel like you didn’t get enough sleep last night?",
+          "type": "single_choice",
+          "options": [
+            "Yes",
+            "No"
+          ],
+          "required": true
+        }
+      ]
+    },
+    {
+      "title": "SECTION E",
+      "description": "Indoor Environment Assessment",
+      "items": []
+    },
+    {
+      "title": "1. Physical Conditions",
+      "description": "Rate your current environment on the following scales:",
+      "items": [
+        {
+          "id": "ieq_temperature",
+          "text": "Temperature",
+          "type": "single_choice",
+          "options": [
+            "Extremely Cold",
+            "Cold",
+            "Neutral",
+            "Warm",
+            "Extremely Warm"
+          ],
+          "required": true
+        },
+        {
+          "id": "ieq_humidity",
+          "text": "Humidity",
+          "type": "single_choice",
+          "options": [
+            "Very Dry",
+            "Slightly Dry",
+            "Neutral",
+            "Slightly Humid",
+            "Very Humid"
+          ],
+          "required": true
+        },
+        {
+          "id": "ieq_air_quality",
+          "text": "Air-Quality",
+          "type": "single_choice",
+          "options": [
+            "Very Poor (stuffy, stale)",
+            "Poor",
+            "Neutral",
+            "Good",
+            "Excellent (fresh, well ventilated)"
+          ],
+          "required": true
+        },
+        {
+          "id": "ieq_lighting",
+          "text": "Lighting",
+          "type": "single_choice",
+          "options": [
+            "Very Dim",
+            "Dim",
+            "Moderate",
+            "Bright",
+            "Very Bright"
+          ],
+          "required": true
+        },
+        {
+          "id": "ieq_noise",
+          "text": "Noise Level",
+          "type": "single_choice",
+          "options": [
+            "Silent",
+            "Quiet (e.g., faint background noise)",
+            "Moderate (e.g., occasional disturbances)",
+            "Loud (e.g., constant interruptions)",
+            "Very loud (e.g., disruptive noise)"
+          ],
+          "required": true
+        }
+      ]
+    },
+    {
+      "title": "2. Spatial & Ergonomic Factors",
+      "description": "",
+      "items": [
+        {
+          "id": "ieq_workspace_size",
+          "text": "Workspace size",
+          "type": "single_choice",
+          "options": [
+            "Very Cramped",
+            "Slightly Cramped",
+            "Adequate",
+            "Spacious",
+            "Very Spacious"
+          ],
+          "required": true
+        },
+        {
+          "id": "ieq_seating_comfort",
+          "text": "Seating Comfort",
+          "type": "single_choice",
+          "options": [
+            "Very Uncomfortable",
+            "Uncomfortable",
+            "Neutral",
+            "Comfortable",
+            "Very Comfortable"
+          ],
+          "required": true
+        },
+        {
+          "id": "ieq_screen_position",
+          "text": "Screen/Display Position:",
+          "type": "single_choice",
+          "options": [
+            "Causes strain (too high/low/far)",
+            "Slightly awkward",
+            "Neutral",
+            "Comfortable",
+            "Optimal"
+          ],
+          "required": true
+        }
+      ]
+    },
+    {
+      "title": "3. Subjective Perception",
+      "description": "",
+      "items": [
+        {
+          "id": "ieq_overall_comfort",
+          "text": "Overall Comfort",
+          "type": "single_choice",
+          "options": [
+            "Very Uncomfortable",
+            "Uncomfortable",
+            "Neutral",
+            "Comfortable",
+            "very Comfortable"
+          ],
+          "required": true
+        },
+        {
+          "id": "ieq_suitable_for_cognitive_tasks",
+          "text": "Suitability for Cognitive Tasks:\n\"This environment is conducive to focused work.\"",
+          "type": "single_choice",
+          "options": [
+            "Strongly disagree",
+            "Disagree",
+            "Neutral",
+            "Agree",
+            "Strongly Agree"
+          ],
+          "required": true
+        }
+      ]
+    }
+  ]
+}

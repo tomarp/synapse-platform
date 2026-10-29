@@ -1,0 +1,337 @@
+{
+  "id": "T2_T3_task_affect_ieq",
+  "title": "Tasks, feelings and indoor environment (T2/T3)",
+  "description": "Please answer the question of survey in context of your current experience with tasks and environemnt during this phase of the experiment.",
+  "source": "converted from a Google Form definition",
+  "sections": [
+    {
+      "title": "Section 1: Task Performance and Difficulty",
+      "description": "",
+      "items": [
+        {
+          "id": "task_difficulty",
+          "text": "How would you rate the difficulty of the tasks you have performed?",
+          "type": "dropdown",
+          "options": [
+            "1: Very Easy",
+            "2: Somewhat Easy",
+            "3: Neutral",
+            "4: Somewhat Difficult",
+            "5: Difficult",
+            "6: Somewhat Very Difficult",
+            "7: Very Difficult",
+            "8: Extremely Difficult",
+            "9: Almost Impossible"
+          ],
+          "required": true
+        },
+        {
+          "id": "task_focus",
+          "text": "How focused did you feel during the tasks?",
+          "type": "dropdown",
+          "options": [
+            "1: Not Focused",
+            "2: Slightly Focused",
+            "3: Somewhat Focused",
+            "4: Moderately Focused",
+            "5: Fairly Focused",
+            "6: Very Focused",
+            "7: Extremely Focused"
+          ],
+          "required": true
+        }
+      ]
+    },
+    {
+      "title": "Section 2: General Experience",
+      "description": "",
+      "items": [
+        {
+          "id": "relaxation_alertness",
+          "text": "How would you rate your overall level of relaxation/alertness during this session?",
+          "type": "dropdown",
+          "options": [
+            "1: Very Relaxed",
+            "2: Somewhat Relaxed",
+            "3: Neutral",
+            "4: Somewhat Alert",
+            "5: Alert",
+            "6: Somewhat Very Alert",
+            "7: Very Alert",
+            "8: Extremely Alert",
+            "9: Almost Fully Alert"
+          ],
+          "required": true
+        },
+        {
+          "id": "emotional_stability",
+          "text": "2. How would you rate the emotional stability you experienced during this session?",
+          "type": "dropdown",
+          "options": [
+            "1: Very Unstable",
+            "2: Somewhat Unstable",
+            "3: Neutral",
+            "4: Somewhat Stable",
+            "5: Stable",
+            "6: Somewhat Very Stable",
+            "7: Very Stable",
+            "8: Extremely Stable",
+            "9: Almost Completely Stable"
+          ],
+          "required": true
+        },
+        {
+          "id": "task_engagement",
+          "text": "3. How engaging did you find the tasks overall?",
+          "type": "dropdown",
+          "options": [
+            "1: Not Engaging",
+            "2: Slightly Engaging",
+            "3: Somewhat Engaging",
+            "4: Moderately Engaging",
+            "5: Fairly Engaging",
+            "6: Very Engaging",
+            "7: Extremely Engaging",
+            "8: Highly Engaging",
+            "9: Almost Completely Engaging"
+          ],
+          "required": true
+        }
+      ]
+    },
+    {
+      "title": "Section 3: Cognitive Load and Emotional State",
+      "description": "",
+      "items": [
+        {
+          "id": "cognitive_load",
+          "text": "1. How would you rate your overall cognitive load during this session?",
+          "type": "dropdown",
+          "options": [
+            "1: Very Low",
+            "2: Somewhat Low",
+            "3: Neutral",
+            "4: Somewhat High",
+            "5: High",
+            "6: Somewhat Very High",
+            "7: Very High",
+            "8: Extremely High",
+            "9: Almost Overwhelming"
+          ],
+          "required": true
+        },
+        {
+          "id": "emotional_valence",
+          "text": "2. How would you rate your emotional valence during this session?",
+          "type": "dropdown",
+          "options": [
+            "1: Very Unhappy",
+            "2: Somewhat Unhappy",
+            "3: Neutral",
+            "4: Somewhat Happy",
+            "5: Happy",
+            "6: Somewhat Very Happy",
+            "7: Very Happy",
+            "8: Extremely Happy",
+            "9: Almost Completely Happy"
+          ],
+          "required": true
+        },
+        {
+          "id": "emotional_arousal",
+          "text": "3. How would you rate your emotional arousal during this session?",
+          "type": "dropdown",
+          "options": [
+            "1: Very Calm",
+            "2: Somewhat Calm",
+            "3: Neutral",
+            "4: Somewhat Excited",
+            "5: Excited",
+            "6: Somewhat Very Excited",
+            "7: Very Excited",
+            "8: Extremely Excited",
+            "9: Almost Completely Excited"
+          ],
+          "required": true
+        }
+      ]
+    },
+    {
+      "title": "Section 4: Right-here Right-now Multi-domain Survey",
+      "description": "Please respond to each question based on your current feelings and perceptions of the environment and situations around you.",
+      "items": []
+    },
+    {
+      "title": "THERMAL",
+      "description": "",
+      "items": [
+        {
+          "id": "thermal_sensation",
+          "text": "1. What is your thermal sensation?",
+          "type": "dropdown",
+          "options": [
+            "1: Cold",
+            "2: Cool",
+            "3: Neutral",
+            "4: Warm",
+            "5: Hot"
+          ],
+          "required": true
+        },
+        {
+          "id": "thermal_satisfaction",
+          "text": "2. How satisfied are you with the thermal environment?",
+          "type": "dropdown",
+          "options": [
+            "1: Very dissatisfied",
+            "2: Dissatisfied",
+            "3: Neutral",
+            "4: Satisfied",
+            "5: Very satisfied"
+          ],
+          "required": true
+        },
+        {
+          "id": "thermal_preference",
+          "text": "3. Would you prefer to be:",
+          "type": "dropdown",
+          "options": [
+            "Cooler",
+            "No Change",
+            "Warmer"
+          ],
+          "required": true
+        }
+      ]
+    },
+    {
+      "title": "AIR-QUALITY",
+      "description": "",
+      "items": [
+        {
+          "id": "air_quality_assessment",
+          "text": "1. How do you assess the air quality of the room?",
+          "type": "dropdown",
+          "options": [
+            "1: Very bad",
+            "2: Bad",
+            "3: Neutral",
+            "4: Good",
+            "5: Very good"
+          ],
+          "required": true
+        },
+        {
+          "id": "air_quality_satisfaction",
+          "text": "2. How satisfied are you with the air quality?",
+          "type": "dropdown",
+          "options": [
+            "1: Very dissatisfied",
+            "2: Dissatisfied",
+            "3: Neutral",
+            "4: Satisfied",
+            "5: Very satisfied"
+          ],
+          "required": true
+        },
+        {
+          "id": "air_movement_preference",
+          "text": "3. Would you prefer",
+          "type": "dropdown",
+          "options": [
+            "Less air movement",
+            "No change",
+            "More air movement"
+          ],
+          "required": true
+        }
+      ]
+    },
+    {
+      "title": "VISUAL",
+      "description": "",
+      "items": [
+        {
+          "id": "light_assessment",
+          "text": "1. How do you assess the light environment of the room?",
+          "type": "dropdown",
+          "options": [
+            "1: Bright",
+            "2: Slightly bright",
+            "3: Neutral",
+            "4: Slightly dark",
+            "5: Dark"
+          ],
+          "required": true
+        },
+        {
+          "id": "light_satisfaction",
+          "text": "2. How satisfied are you with the light condition?",
+          "type": "dropdown",
+          "options": [
+            "1: Very dissatisfied",
+            "2: Dissatisfied",
+            "3: Neutral",
+            "4: Satisfied",
+            "5: Very satisfied"
+          ],
+          "required": true
+        },
+        {
+          "id": "light_preference",
+          "text": "3. Would you prefer the lighting condition to be",
+          "type": "dropdown",
+          "options": [
+            "Brighter",
+            "No change",
+            "Dimmer"
+          ],
+          "required": true
+        }
+      ]
+    },
+    {
+      "title": "ACOUSTICS",
+      "description": "",
+      "items": [
+        {
+          "id": "acoustic_assessment",
+          "text": "1. How do you assess the acoustics of the room?",
+          "type": "dropdown",
+          "options": [
+            "1: Very noisy",
+            "2: Noisy",
+            "3: Neutral",
+            "4: Quiet",
+            "5: Very quiet"
+          ],
+          "required": true
+        },
+        {
+          "id": "acoustic_satisfaction",
+          "text": "2. How satisfied are you with the acoustics?",
+          "type": "dropdown",
+          "options": [
+            "1: Very dissatisfied",
+            "2: Dissatisfied",
+            "3: Neutral",
+            "4: Satisfied",
+            "5: Very satisfied"
+          ],
+          "required": true
+        },
+        {
+          "id": "acoustic_preference",
+          "text": "3. Would you prefer the acoustic environment to be…",
+          "type": "dropdown",
+          "options": [
+            "Louder",
+            "No change",
+            "Quiter"
+          ],
+          "required": true
+        }
+      ]
+    }
+  ]
+}

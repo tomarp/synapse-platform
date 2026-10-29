@@ -1,0 +1,54 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+type: software
+title: "SYNAPSE experiment platform"
+version: "2.2.0"
+date-released: "2026-10-29"
+license: MIT
+url: "https://synapse.ptomar.com"
+abstract: "SYNAPSE (Synergistic Neurophysiological Assessment of Perception in Sensory Environments). Browser application for cognitive-task sessions (n-back, Stroop, flanker, visual counting and shape comparison) with questionnaires, rest baselines and soundscapes; no server, local data export; includes the protocol of the SYNAPSE study."
+authors:
+  - family-names: "Tomar"
+    given-names: "Puneet"
+    orcid: "https://orcid.org/0000-0002-5168-5471"
+    affiliation: "University of Perugia, Department of Engineering, CIRIAF; Technical University of Denmark, Department of Environmental and Resource Engineering"
+keywords:
+  - "cognitive tasks"
+  - "n-back"
+  - "Stroop"
+  - "flanker"
+  - "experiment software"
+  - "indoor environmental quality"
+references:
+  - type: dataset
+    title: "SYNAPSE: EEG, wrist physiology, facial thermal imaging, indoor environment and cognitive performance of adults working under warm and cool LED lighting and urban soundscapes"
+    authors:
+      - family-names: "Tomar"
+        given-names: "Puneet"
+      - family-names: "Dave"
+        given-names: "Tanmay"
+      - family-names: "Wargocki"
+        given-names: "Pawel"
+      - family-names: "Pisello"
+        given-names: "Anna Laura"
+    publisher:
+      name: "Zenodo"
+    version: "1.0.0"
+    year: 2026
+    doi: "10.5281/zenodo.23458777"
+  - type: generic
+    title: "Multimodal assessment of cognitive performance, physiology and perceived indoor environment under warm and cool LED lighting and urban soundscapes (SYNAPSE)"
+    authors:
+      - family-names: "Tomar"
+        given-names: "Puneet"
+      - family-names: "Dave"
+        given-names: "Tanmay"
+      - family-names: "Wargocki"
+        given-names: "Pawel"
+      - family-names: "Pisello"
+        given-names: "Anna Laura"
+    publisher:
+      name: "protocols.io"
+    year: 2026
+    doi: "10.17504/protocols.io.m7vznm25rvx1/v1"
+    notes: "Protocol"

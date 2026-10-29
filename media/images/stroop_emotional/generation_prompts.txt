@@ -1,0 +1,35 @@
+### Positive Words
+1. Write word with symbol: HAPPY 😊, Single color, Red': '#E74C3C', Minimalist design, Flat color, No background.
+2. Write word with symbol: FLOWER 🌻, Single color, Blue: '#3498DB', Minimalist design, Flat color, No background.
+3. Write word with symbol: SMILE 😄, Single color, Blue: '#3498DB', Minimalist design, Flat color, No background.
+4. Write word with symbol: BLESSING 🙌, Single color, Red': '#E74C3C', Minimalist design, Flat color, No background.
+5. Write word with symbol: SUNNY ☀️, Single color, Blue: '#3498DB', Minimalist design, Flat color, No background.
+6. Write word with symbol: GOODLUCK 👍, Single color, Red': '#E74C3C', Minimalist design, Flat color, No background.
+7. Write word with symbol: LAUGH 😂, Single color, Blue: '#3498DB', Minimalist design, Flat color, No background.
+8. Write word with symbol: HUGGS 🤗, Single color, Blue: '#3498DB', Minimalist design, Flat color, No background.
+9. Write word with symbol: JOYFUL 🎉, Single color, Green: '#2ECC71', Minimalist design, Flat color, No background.
+10.Write word with symbol:  Rainbow 🌈, Single color, Yellow: '#F1C40F', Minimalist design, Flat color, No background.
+
+### Negative Words
+1. Write word with symbol: ANGER 😡, Single color, Yellow: '#F1C40F', Minimalist design, Flat color, No background.
+2. Write word with symbol: STORM ⛈️, Single color, Blue: '#3498DB', Minimalist design, Flat color, No background.
+3. Write word with symbol: ALONE 😔, Single color, Yellow: '#F1C40F', Minimalist design, Flat color, No background.
+4. Write word with symbol: PANIC 😱, Single color, Green: '#2ECC71', Minimalist design, Flat color, No background.
+5. Write word with symbol: GRIEF 😢, Single color, Yellow: '#F1C40F', Minimalist design, Flat color, No background.
+6. Write word with symbol: SADLY 😞, Single color, Green: '#2ECC71', Minimalist design, Flat color, No background.
+7. Write word with symbol: FIGHT 🥊, Single color, Blue: '#3498DB', Minimalist design, Flat color, No background.
+8. Write word with symbol: HURTS 😖, Single color, Yellow: '#F1C40F', Minimalist design, Flat color, No background.
+9. Write word with symbol: DEATH 💀, Single color, Yellow: '#F1C40F', Minimalist design, Flat color, No background.
+10.Write word with symbol: FEARS 😨, Single color, Green: '#2ECC71', Minimalist design, Flat color, No background.
+
+### Neutral Words
+1. Write word with symbol: PAPER 📄, Single color, Blue: '#3498DB', Minimalist design, Flat color, No background.
+2. Write word with symbol: HOUSE 🏠, Single color, Green: '#2ECC71', Minimalist design, Flat color, No background.
+3. Write word with symbol: WINDOW 🪟, Single color, Green: '#2ECC71', Minimalist design, Flat color, No background.
+4. Write word with symbol: CLOCK ⏰, Single color, Yellow: '#F1C40F', Minimalist design, Flat color, No background.
+5. Write word with symbol: KEY 🔑, Single color, Blue: '#3498DB', Minimalist design, Flat color, No background.
+6. Write word with symbol: CHAIR 🪑, Single color, Green: '#2ECC71', Minimalist design, Flat color, No background.
+7. Write word with symbol: BOOK 📚, Single color, Yellow: '#F1C40F', Minimalist design, Flat color, No background.
+8. Write word with symbol: STONE 🪨, Single color, Blue: '#3498DB', Minimalist design, Flat color, No background.
+9. Write word with symbol: CAR 🚗, Single color, Red': '#E74C3C', Minimalist design, Flat color, No background.
+10.Write word with symbol: GLASS 🍷, Single color, Green: '#2ECC71', Minimalist design, Flat color, No background.

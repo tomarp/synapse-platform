@@ -1,0 +1,224 @@
+{
+  "format": "synapse-protocol/1",
+  "id": "synapse_full_session",
+  "name": "SYNAPSE full session",
+  "description": "One SYNAPSE session (about 40 min): welcome page, pre-session questionnaire (T0), 5-min eyes-open baseline, indoor-environment questionnaire (T1), task round 1 with the first soundscape, questionnaire T2, task round 2 with the second soundscape, questionnaire T3. Trial numbers and timings as in the SYNAPSE study (DTU, June 2025). Each participant does two sessions (warm and cool lighting) with the soundscape order reversed.",
+  "settings": {
+    "timer_visible": true,
+    "on_timeout": "show_continue",
+    "keyboard": true,
+    "play_audio": true,
+    "audio_volume": 0.8,
+    "theme": "light",
+    "theme_field": "lighting",
+    "theme_map": {
+      "warm": "light",
+      "cool": "dark"
+    }
+  },
+  "session_fields": [
+    {
+      "id": "lighting",
+      "label": "Lighting condition",
+      "options": [
+        "warm",
+        "cool"
+      ]
+    },
+    {
+      "id": "soundscape_order",
+      "label": "Soundscape order",
+      "options": [
+        "babble_first",
+        "traffic_first"
+      ]
+    }
+  ],
+  "audio_slots": {
+    "round1": {
+      "by": "soundscape_order",
+      "map": {
+        "babble_first": "cafeteria_babble",
+        "traffic_first": "road_traffic"
+      }
+    },
+    "round2": {
+      "by": "soundscape_order",
+      "map": {
+        "babble_first": "road_traffic",
+        "traffic_first": "cafeteria_babble"
+      }
+    }
+  },
+  "steps": [
+    {
+      "id": "welcome",
+      "type": "message",
+      "title": "SYNAPSE",
+      "text": "Synergistic Neurophysiological Assessment of Perception in Sensory Environments\n\nWelcome to the platform.\nPlease wait for the researcher's sign before you begin.",
+      "button": "START",
+      "show_logos": true,
+      "background": "mind_galaxy"
+    },
+    {
+      "id": "T0",
+      "type": "questionnaire",
+      "title": "Pre-session questionnaire",
+      "questionnaire": "questionnaires/synapse_T0_pre_session.json",
+      "time_limit_s": 300,
+      "background": "digital_brain"
+    },
+    {
+      "id": "baseline",
+      "type": "baseline",
+      "title": "Baseline Signal Recording",
+      "duration_s": 300,
+      "text": "Please remain still while keeping your eyes open. Keep calm and avoid moving your body parts including head.",
+      "background": "moon_eye"
+    },
+    {
+      "id": "T1",
+      "type": "questionnaire",
+      "title": "Indoor environment",
+      "questionnaire": "questionnaires/synapse_T1_ieq.json",
+      "time_limit_s": 300,
+      "background": "digital_brain"
+    },
+    {
+      "id": "nback_letter",
+      "type": "nback",
+      "variant": "letter",
+      "title": "N-Back Letters",
+      "levels": [
+        1,
+        2,
+        3
+      ],
+      "trials_per_level": 60,
+      "target_ratio": 0.3,
+      "fixation_ms": 500,
+      "iti_ms": 750,
+      "time_limit_s": 300,
+      "audio": "round1",
+      "background": "wired_brain_dim"
+    },
+    {
+      "id": "stroop_word",
+      "type": "stroop",
+      "variant": "word",
+      "title": "Color Identification",
+      "trials": 60,
+      "congruent_ratio": 0,
+      "fixation_ms": 750,
+      "iti_ms": 1000,
+      "time_limit_s": 300,
+      "audio": "round1",
+      "background": "wired_brain_dim"
+    },
+    {
+      "id": "visual_count",
+      "type": "visual",
+      "variant": "count",
+      "title": "Visual Counting",
+      "items": "all",
+      "max_trials": 0,
+      "iti_ms": 500,
+      "time_limit_s": 300,
+      "audio": "round1",
+      "background": "wired_brain_dim"
+    },
+    {
+      "id": "flanker_arrow",
+      "type": "flanker",
+      "variant": "arrow",
+      "title": "Arrow Flanker Task",
+      "trials": 60,
+      "fixation_ms": 500,
+      "iti_ms": 1000,
+      "time_limit_s": 300,
+      "audio": "round1",
+      "background": "wired_brain_dim"
+    },
+    {
+      "id": "T2",
+      "type": "questionnaire",
+      "title": "Tasks, feelings and indoor environment",
+      "questionnaire": "questionnaires/synapse_T2_T3_task_affect_ieq.json",
+      "time_limit_s": 300,
+      "audio": "round1",
+      "background": "wired_brain"
+    },
+    {
+      "id": "nback_digit",
+      "type": "nback",
+      "variant": "digit",
+      "title": "N-Back Digits",
+      "levels": [
+        1,
+        2,
+        3
+      ],
+      "trials_per_level": 60,
+      "target_ratio": 0.3,
+      "fixation_ms": 500,
+      "iti_ms": 750,
+      "time_limit_s": 300,
+      "audio": "round2",
+      "background": "wired_brain_dim"
+    },
+    {
+      "id": "stroop_emoji",
+      "type": "stroop",
+      "variant": "emoji",
+      "title": "Stroop-Emoji",
+      "trials": 60,
+      "fixation_ms": 750,
+      "iti_ms": 1000,
+      "time_limit_s": 300,
+      "audio": "round2",
+      "background": "wired_brain_dim"
+    },
+    {
+      "id": "visual_shape",
+      "type": "visual",
+      "variant": "shape",
+      "title": "Shape Comparison",
+      "items": "all",
+      "max_trials": 0,
+      "iti_ms": 500,
+      "time_limit_s": 300,
+      "audio": "round2",
+      "background": "wired_brain_dim"
+    },
+    {
+      "id": "flanker_digit",
+      "type": "flanker",
+      "variant": "digit",
+      "title": "Digit Flanker Task",
+      "trials": 60,
+      "fixation_ms": 500,
+      "iti_ms": 1000,
+      "time_limit_s": 300,
+      "audio": "round2",
+      "background": "wired_brain_dim"
+    },
+    {
+      "id": "T3",
+      "type": "questionnaire",
+      "title": "Tasks, feelings and indoor environment",
+      "questionnaire": "questionnaires/synapse_T2_T3_task_affect_ieq.json",
+      "time_limit_s": 300,
+      "audio": "round2",
+      "background": "wired_brain"
+    },
+    {
+      "id": "end",
+      "type": "message",
+      "title": "Thank You!",
+      "text": "You have now completed the experiment. We greatly appreciate your time and contribution.",
+      "button": "",
+      "background": "mind_galaxy",
+      "show_logos": true
+    }
+  ]
+}
