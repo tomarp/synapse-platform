@@ -1,0 +1,53 @@
+{
+  "upload_type": "software",
+  "title": "SYNAPSE experiment platform: cognitive experiments in the browser",
+  "version": "2.2.0",
+  "description": "<p>SYNAPSE (Synergistic Neurophysiological Assessment of Perception in Sensory Environments) experiment platform: an open, browser-based application for cognitive experiments. It combines established task paradigms (n-back, Stroop, flanker, visual counting and shape comparison), questionnaires, rest baselines and soundscapes in one session; an experiment designer with templates, practice trials, feedback and counterbalancing; shareable protocol files; and local CSV/JSON export. No server is required and no participant data leave the computer.</p><p>The built-in protocol reproduces the session of the SYNAPSE study (Technical University of Denmark, June 2025). Live version: <a href=\"https://synapse.ptomar.com\">https://synapse.ptomar.com</a>.</p>",
+  "creators": [
+    {
+      "name": "Tomar, Puneet",
+      "orcid": "0000-0002-5168-5471",
+      "affiliation": "University of Perugia (CIRIAF); Technical University of Denmark"
+    }
+  ],
+  "license": "MIT",
+  "keywords": [
+    "cognitive tasks",
+    "experiment software",
+    "n-back",
+    "Stroop",
+    "flanker",
+    "questionnaires",
+    "soundscapes",
+    "indoor environmental quality",
+    "browser",
+    "open science"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "https://synapse.ptomar.com",
+      "relation": "isSupplementedBy",
+      "scheme": "url",
+      "resource_type": "other"
+    },
+    {
+      "identifier": "10.17504/protocols.io.m7vznm25rvx1/v1",
+      "relation": "isDocumentedBy",
+      "scheme": "doi",
+      "resource_type": "publication-other"
+    },
+    {
+      "identifier": "10.5281/zenodo.23458777",
+      "relation": "isSupplementTo",
+      "scheme": "doi",
+      "resource_type": "dataset"
+    }
+  ],
+  "grants": [
+    {
+      "id": "10.13039/501100000780::101073357"
+    }
+  ],
+  "language": "eng",
+  "access_right": "open"
+}
