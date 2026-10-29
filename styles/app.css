@@ -473,3 +473,10 @@ a.logo-tile:hover { transform: translateY(-2px); background: color-mix(in srgb, 
 .f-author-card strong { color: #fff; font-size: .95rem; }
 .avatar.sm { width: 42px; height: 42px; font-size: .95rem; }
 .social.telegram:hover { background: #229ed9; border-color: #229ed9; color: #fff; }
+
+/* study relevance tiles */
+.domains { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 16px 0 4px; }
+.domain { display: flex; flex-direction: column; gap: 4px; padding: 12px; border-radius: 12px; background: var(--panel); border: 1px solid var(--line);
+  border-left: 3px solid var(--accent); font-size: .86rem; }
+.domain strong { font-size: .9rem; } .domain span { color: var(--muted); }
+@media (max-width: 760px) { .domains { grid-template-columns: 1fr; } }

@@ -274,7 +274,7 @@ function about() {
     h('section', { class: 'card' },
       h('h2', {}, 'The software'),
       h('p', {}, `SYNAPSE (${PROJECT_FULL}) experiment platform. It grew out of the task platform used in the SYNAPSE study `,
-        '(Technical University of Denmark, June 2025) and is now an open tool for cognitive experiments in indoor-environment research and beyond. ',
+        '(Technical University of Denmark, June 2025) and is now an open tool for cognitive experiments in multi-domain indoor-environment research, building informatics and beyond. ',
         'The built-in "SYNAPSE full session" reproduces the tasks, trial numbers, timings and questionnaires of the study.'),
       h('h3', {}, 'Privacy'),
       h('p', {}, 'The app runs entirely in the browser and sends no data anywhere. Responses stay in this browser\'s storage until you download or delete them.'),

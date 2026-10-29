@@ -24,9 +24,11 @@ SYNAPSE is an open, browser-based platform for cognitive experiments. Assemble a
 paradigms, questionnaires, rest baselines and soundscapes; run it on any laptop; and download analysis-ready data.
 **No installation, no server, no account, and no participant data leaving the computer.**
 
-It was built for the SYNAPSE study at the Technical University of Denmark (2025), which examined how lighting colour and
-urban soundscapes affect cognition, physiology and perceived comfort. The complete study session is included as a
-ready-to-run protocol.
+It was built for the SYNAPSE study at the Technical University of Denmark (2025), a **multi-domain indoor environmental
+quality** study: lighting colour and urban soundscapes were varied together while thermal and air-quality conditions were
+monitored, and occupants' cognition, physiology and perceived comfort were recorded. Its time-aligned occupant and
+building data serve **building informatics**: data-driven comfort and performance models, occupant-centric building
+operation and digital twins. The complete study session is included as a ready-to-run protocol.
 
 ## ✨ Highlights
 
