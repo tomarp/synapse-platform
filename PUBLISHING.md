@@ -69,8 +69,16 @@ Your main site (ptomar.com) is not affected. DNS changes usually take minutes, a
 1. Back in **Settings → Pages**, wait until the domain check is green, then tick **Enforce HTTPS**.
 2. Open https://synapse.ptomar.com: the home page, *Explore the demo*, a task *Try it*, the Designer.
 
-## Optional: a DOI for the software
+## Software DOI and new versions
 
-On zenodo.org → *GitHub* → switch on the `synapse-platform` repository, then on GitHub create a **Release** (tag `v2.2.0`).
-Zenodo archives it and assigns a DOI. Add that DOI to `app/info.js` (`REFERENCES`, entry *Software*) and to
-`CITATION.cff`, then push again.
+The software is archived on Zenodo: concept DOI **10.5281/zenodo.23768059** (all versions), v2.2.0 = 10.5281/zenodo.23768060.
+
+For a new version (e.g. 2.3.0):
+1. Update `APP_VERSION` and `SOFTWARE_VERSION_DOI` in `app/info.js`, the version in `CITATION.cff` and `.zenodo.json`,
+   and `CHANGELOG.md`; commit and push.
+2. Create the GitHub release: `gh release create v2.3.0 --title "SYNAPSE experiment platform v2.3.0" --notes "…"`.
+3. On zenodo.org open the record → **New version** → upload the release ZIP from GitHub → publish. This keeps the
+   same concept DOI and adds a version DOI.
+
+Do **not** switch on Zenodo's GitHub integration for this repository: the repository was recreated on 2026-10-29, and
+Zenodo would treat it as a new project and start a second DOI series.
