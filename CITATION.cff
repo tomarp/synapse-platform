@@ -25,7 +25,7 @@ keywords:
   - "indoor environmental quality"
 references:
   - type: dataset
-    title: "SYNAPSE: EEG, wrist physiology, facial thermal imaging, indoor environment and cognitive performance of adults working under warm and cool LED lighting and urban soundscapes"
+    title: "SYNAPSE: cognitive performance, EEG, wrist physiology, facial thermography and indoor environment under warm and cool LED lighting and urban soundscapes"
     authors:
       - family-names: "Tomar"
         given-names: "Puneet"

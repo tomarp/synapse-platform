@@ -124,7 +124,7 @@ export function renderHome(root, { author, paused }) {
             'each completed two sessions in a simulated office: one under warm (2014 K) and one under cool (6250 K) LED light, each with two ',
             'urban soundscapes (cafeteria babble, road traffic), while temperature, humidity and air quality were monitored.'),
           h('p', {}, 'Alongside the tasks and questionnaires run on this platform, the study recorded EEG (Muse S), wrist physiology (ActiGraph LEAP), ',
-            'facial temperature (FLIR thermal camera) and room conditions (ATMOCUBE).'),
+            'facial thermography (FLIR thermal camera) and room conditions (ATMOCUBE).'),
           h('div', { class: 'facts' },
             ...[['10', 'participants'], ['20', 'sessions'], ['8,172', 'task responses'], ['15.6 h', 'EEG']].map(([n, l]) => h('div', {}, h('strong', {}, n), h('span', {}, l)))),
           h('div', { class: 'row study-links' },
@@ -137,7 +137,7 @@ export function renderHome(root, { author, paused }) {
           h('a', { class: 'btn primary', href: '#/demo' }, '▶ Run the study session as a demo'))),
       h('div', { class: 'domains reveal' },
         ...[['◐', 'Multi-domain IEQ', 'Lighting colour (visual) and soundscapes (acoustic) varied together, with temperature, humidity and air quality monitored: combined effects instead of one domain at a time.'],
-          ['⧉', 'Building informatics', 'Occupant streams (tasks, EEG, wrist physiology, facial temperature, questionnaires) time-aligned with room sensors and published as a machine-readable BIDS dataset.'],
+          ['⧉', 'Building informatics', 'Occupant streams (tasks, EEG, wrist physiology, facial thermography, questionnaires) time-aligned with room sensors and published as a machine-readable BIDS dataset.'],
           ['⌂', 'Occupant-centric operation', 'A basis for data-driven comfort and performance models, adaptive building control and human-in-the-loop digital twins.']]
           .map(([i, tt, x]) => h('div', { class: 'domain' }, h('span', { class: 'domain-ic' }, i), h('h3', {}, tt), h('p', {}, x))))),
     h('section', { class: 'band', id: 'how' },

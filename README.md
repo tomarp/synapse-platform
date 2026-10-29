@@ -91,9 +91,9 @@ If you use SYNAPSE in your research, please cite the software:
 
 Related outputs of the SYNAPSE study:
 
-- **Dataset**: Tomar, P., Dave, T., Wargocki, P., & Pisello, A. L. (2026). *SYNAPSE: EEG, wrist physiology, facial thermal
-  imaging, indoor environment and cognitive performance of adults working under warm and cool LED lighting and urban
-  soundscapes* [Data set]. Zenodo. https://doi.org/10.5281/zenodo.23458777
+- **Dataset**: Tomar, P., Dave, T., Wargocki, P., & Pisello, A. L. (2026). *SYNAPSE: cognitive performance, EEG, wrist
+  physiology, facial thermography and indoor environment under warm and cool LED lighting and urban soundscapes*
+  [Data set]. Zenodo. https://doi.org/10.5281/zenodo.23458777
 - **Protocol**: Tomar, P., Dave, T., Wargocki, P., & Pisello, A. L. (2026). *Multimodal assessment of cognitive performance,
   physiology and perceived indoor environment under warm and cool LED lighting and urban soundscapes (SYNAPSE)*.
   protocols.io. https://doi.org/10.17504/protocols.io.m7vznm25rvx1/v1

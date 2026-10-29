@@ -24,8 +24,8 @@ export const doiUrl = (doi) => `https://doi.org/${doi}`;
 const TEAM = { apa: 'Tomar, P., Dave, T., Wargocki, P., & Pisello, A. L.',
   bib: 'Tomar, Puneet and Dave, Tanmay and Wargocki, Pawel and Pisello, Anna Laura',
   ris: ['Tomar, Puneet', 'Dave, Tanmay', 'Wargocki, Pawel', 'Pisello, Anna Laura'] };
-const DATASET_TITLE = 'SYNAPSE: EEG, wrist physiology, facial thermal imaging, indoor environment and cognitive performance of adults '
-  + 'working under warm and cool LED lighting and urban soundscapes';
+const DATASET_TITLE = 'SYNAPSE: cognitive performance, EEG, wrist physiology, facial thermography and indoor environment '
+  + 'under warm and cool LED lighting and urban soundscapes';
 const PROTOCOL_TITLE = 'Multimodal assessment of cognitive performance, physiology and perceived indoor environment under warm and cool '
   + 'LED lighting and urban soundscapes (SYNAPSE)';
 
