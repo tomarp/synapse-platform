@@ -35,7 +35,7 @@ The folder has about 120 files (125 MB), more than the web uploader takes at onc
 **With the command line** (replace `YOUR-GITHUB-NAME`):
 
 ```bash
-cd output/02_experiment_platform
+cd output/experiment_platform
 git init -b main
 git add .
 git commit -m "SYNAPSE experiment platform v2.2.0"
