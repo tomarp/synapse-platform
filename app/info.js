@@ -13,7 +13,7 @@ export const AUTHOR = {
     'Department of Environmental and Resource Engineering, Technical University of Denmark',
   ],
   orcid: '0000-0002-5168-5471',
-  email: 'puneet.tomar@unipg.it',
+  email: 'puneet.tomar@proton.me',
   linkedin: 'https://www.linkedin.com/in/tomarp/',
 };
 

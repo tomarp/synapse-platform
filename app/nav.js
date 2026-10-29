@@ -48,7 +48,7 @@ export function footer() {
         h('p', {}, 'Open research software for cognitive experiments in the browser: validated tasks, questionnaires and soundscapes, shareable protocols, data that stay on your computer.'),
         h('div', { class: 'f-badges' }, h('span', {}, `v${APP_VERSION}`), h('span', {}, 'MIT licence'), h('span', {}, 'No data upload · no tracking'))),
       col('Platform', a('#/start', 'Start a session'), a('#/demo', 'Try the demo'), a('#/designer', 'Experiment designer'), a('#/data', 'Data and export'), a('#/guide', 'Guide')),
-      col('Resources', a('README.md', 'Documentation', true), a('protocols/synapse_full_session.json', 'Example protocol file', true), a('CHANGELOG.md', 'Changelog', true),
+      col('Resources', a('https://github.com/tomarp/synapse-platform/blob/main/docs/documentation.md', 'Documentation', true), a('https://github.com/tomarp/synapse-platform', 'Source code (GitHub)', true), a('protocols/synapse_full_session.json', 'Example protocol file', true), a('CHANGELOG.md', 'Changelog', true),
         a('CITATION.cff', 'Citation file', true), a('#/about', 'Privacy and media credits')),
       col('Research', a('#/cite', 'Cite the platform'),
         ...REFERENCES.map((r) => (r.doi ? a(doiUrl(r.doi), `SYNAPSE ${r.kind.toLowerCase()} (${r.where})`, true)

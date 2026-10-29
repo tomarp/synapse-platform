@@ -1,229 +1,121 @@
-# SYNAPSE experiment platform
+<div align="center">
 
-*SYNAPSE: SYnergistic Neurophysiological Assessment of Perception in Sensory Environments.*
+<img src="docs/images/synapse-wordmark.svg" alt="SYNAPSE experiment platform" width="460">
 
-A browser application for running cognitive-task sessions: n-back, Stroop, flanker, visual counting and shape comparison,
-questionnaires, rest baselines and background soundscapes, in an order and with settings you choose.
-It needs no installation and no server, and it sends no data anywhere. Responses stay in the browser until you
-download them as CSV/JSON.
+### Design, run and share cognitive experiments in any browser
 
-The built-in protocol **SYNAPSE full session** reproduces one session of the SYNAPSE study (Technical University of
-Denmark, June 2025) with its tasks, trial numbers, timings and questionnaires. The SYNAPSE dataset was recorded with
-it (see *Relation to the SYNAPSE study*).
+*SYNAPSE: Synergistic Neurophysiological Assessment of Perception in Sensory Environments*
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23768059.svg)](https://doi.org/10.5281/zenodo.23768059)
+[![Live demo](https://img.shields.io/badge/live%20demo-synapse.ptomar.com-3b5bfd?style=for-the-badge)](https://synapse.ptomar.com)
+[![DOI](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.23768059-1682d4?style=for-the-badge)](https://doi.org/10.5281/zenodo.23768059)
+[![License: MIT](https://img.shields.io/badge/license-MIT-22c55e?style=for-the-badge)](LICENSE)
 
-**Live:** https://synapse.ptomar.com · **DOI:** [10.5281/zenodo.23768059](https://doi.org/10.5281/zenodo.23768059) · publishing steps: `PUBLISHING.md`
+[**Open the platform**](https://synapse.ptomar.com) · [**Try the demo**](https://synapse.ptomar.com/#/demo) · [**Design an experiment**](https://synapse.ptomar.com/#/designer) · [Documentation](docs/documentation.md) · [Cite](#cite)
 
-## Quick start
+<br>
 
-1. Serve this folder with any static web server and open it in a browser (Chrome, Edge, Firefox or Safari):
-   ```bash
-   python3 -m http.server 8000        # then open http://localhost:8000
-   ```
-   It also works from GitHub Pages or any web host: upload the folder as it is.
-   Opening `index.html` directly from disk does not work, because browsers block the module scripts.
-2. **Try the demo**: runs the full SYNAPSE session. *Skip step* (top right) moves on; ✕ leaves the session.
-3. **Start a session**: enter a participant ID and session ID, choose the protocol and the session fields (e.g. lighting
-   condition, soundscape order), and start.
-4. **Data**: download each session as a ZIP after it ends.
+<img src="docs/screenshots/home.jpg" alt="SYNAPSE home page" width="900">
 
-## Pages
+</div>
 
-| Page | What it does |
+---
+
+SYNAPSE is an open, browser-based platform for cognitive experiments. Assemble a session from established task
+paradigms, questionnaires, rest baselines and soundscapes; run it on any laptop; and download analysis-ready data.
+**No installation, no server, no account, and no participant data leaving the computer.**
+
+It was built for the SYNAPSE study at the Technical University of Denmark (2025), which examined how lighting colour and
+urban soundscapes affect cognition, physiology and perceived comfort. The complete study session is included as a
+ready-to-run protocol.
+
+## ✨ Highlights
+
+| | |
 |---|---|
-| Home | What the platform does; the nine tasks with live previews and a one-minute *Try it* (score shown, nothing saved); the SYNAPSE study with an interactive session timeline; partners and funding |
-| Try the demo | The full SYNAPSE session with a *Skip step* button; its data are marked `demo` |
-| Start a session | Participant ID, session ID, protocol, session fields, optional full screen |
-| Designer | Build or edit a protocol from a template; preview steps; test-run; save in the browser; export/import as a file |
-| Guide | Your own experiment in six steps |
-| Data | List of sessions; download one or all as ZIP; delete |
-| About | Version, privacy, timing, citation |
+| 🧠 **Nine task paradigms** | N-back (letters, digits), colour-word, emoji and emotional-word Stroop, arrow and digit flanker, visual counting, shape comparison |
+| ✎ **Experiment designer** | Templates, drag-and-drop steps, trial numbers, time limits, practice trials with feedback, your own instructions and questionnaires |
+| ⇄ **Counterbalancing** | Session conditions, random-order groups, soundscapes and colour themes that follow a condition |
+| ⬇ **Analysis-ready data** | One ZIP per session or all sessions combined: trials, questionnaire answers and an event log as CSV, plus a JSON with the protocol and seed |
+| ⟲ **Reproducible** | Seeded trial lists, the protocol stored with every session, shareable protocol files |
+| 🔒 **Private by design** | Runs entirely in the browser; data stay on the computer until you download them |
 
-During a session the top bar shows the step number and title, a progress bar of all steps and the countdown of the
-step's time limit.
+## 🖼️ A look inside
 
-| Mode | Controls |
-|---|---|
-| Demo, test run, preview | ◂ Back · Skip ▸ · ☰ Steps (jump to any step, or click the progress bar) · Exit |
-| Real session | a discreet ⋯ researcher menu: skip, back, jump to a step, leave (each asks for confirmation) |
-| Keyboard (all modes) | Alt+→ next step · Alt+← previous step · Alt+M menu · Esc twice leaves a demo |
+<table>
+  <tr>
+    <td width="50%"><img src="docs/screenshots/tasks.jpg" alt="Task gallery with live previews"><br><sub><b>Task gallery</b> — live previews and one-minute try-outs</sub></td>
+    <td width="50%"><img src="docs/screenshots/designer.jpg" alt="Experiment designer"><br><sub><b>Experiment designer</b> — templates, steps, practice and feedback</sub></td>
+  </tr>
+  <tr>
+    <td width="50%"><img src="docs/screenshots/task.jpg" alt="A running task"><br><sub><b>Running session</b> — progress bar, timer and researcher controls</sub></td>
+    <td width="50%"><img src="docs/screenshots/citation.jpg" alt="Citation section"><br><sub><b>Open science</b> — cite the software, dataset and protocol</sub></td>
+  </tr>
+</table>
 
-Skipped, repeated and jumped steps are logged in `events.csv` (`step_end` with the reason, `step_restart`).
-A session that is left, or interrupted by closing the browser, can be resumed from its current step on the home page.
+## 🚀 Get started
 
-## Building your own experiment (Designer)
+**Use it online:** open **https://synapse.ptomar.com** and choose *Explore the demo*, *Design an experiment* or *Start a session*.
 
-A **protocol** is an ordered list of steps plus a few settings. Start from a template (Blank, Quick cognitive battery,
-Single task, Before/after, SYNAPSE full session), a saved protocol or an imported file. The overview shows the estimated
-duration; ▶ Preview runs one step and ▶ Test run the whole session without keeping data. Unsaved work is kept as a
-draft in the browser.
-
-Every task can have **practice trials** (stored with `phase = practice`), **✓/✗ feedback** (practice only or all trials),
-its own **instruction text** (e.g. in another language; `{n}` stands for the n-back level) and a **random-order group**:
-steps with the same group name swap places at random in each session (the order is stored as `step_order`).
-
-| Step type | Settings |
-|---|---|
-| Message | Title, text, button label (no button = final page) |
-| Questionnaire | One of the SYNAPSE questionnaires, or your own questions: rating scale (1–k with end labels), single/multiple choice, dropdown, text, number; sections; export/import |
-| Baseline | Duration, text; shows a fixation cross |
-| N-back | Letters or digits; levels (1–5); trials per level; target proportion; fixation and pause durations |
-| Stroop | Colour words (with a congruent proportion), colour words with emoji, or emotional words (images); trials; timings |
-| Flanker | Arrows (left/right) or digits (even/odd); trials (conditions balanced); timings |
-| Visual | Counting (type a number) or shape comparison (same/different); all images or only those with a verifiable answer key |
-
-Every step except Message can have a **time limit**. When it runs out, a *Continue* button appears and the task keeps
-running until it is pressed, as in SYNAPSE. Alternatively the step can end immediately. Steps can play a
-**soundscape** in a loop: either a fixed one, or a *slot* that depends on a session field. For example, `round1`
-plays cafeteria babble when `soundscape_order = babble_first` and road traffic otherwise.
-
-**Session fields** are asked at the start of each session and saved with every data row; use them for conditions
-and counterbalancing. The colour theme can follow a session field (in SYNAPSE: cool lighting → dark theme).
-
-Responses can be given with the mouse or with the keyboard: n-back J/F, Stroop R/G/B/Y, arrow flanker ←/→,
-digit flanker E/O, shapes S/D, counting Enter.
-
-**Sharing a protocol:** *Export file* saves it as JSON. Another lab opens the app, chooses *Import file*, and runs
-exactly the same experiment. Every session also stores a copy of its protocol.
-
-### Protocol file (`synapse-protocol/1`)
-
-```json
-{
-  "format": "synapse-protocol/1", "id": "my_study", "name": "My study", "description": "…",
-  "settings": { "timer_visible": true, "on_timeout": "show_continue", "keyboard": true, "play_audio": true,
-                "audio_volume": 0.8, "theme": "light", "theme_field": "", "theme_map": {} },
-  "session_fields": [ { "id": "order", "label": "Soundscape order", "options": ["babble_first", "traffic_first"] } ],
-  "audio_slots": { "round1": { "by": "order", "map": { "babble_first": "cafeteria_babble", "traffic_first": "road_traffic" } } },
-  "steps": [
-    { "id": "nb", "type": "nback", "title": "N-Back", "variant": "letter", "levels": [1, 2], "trials_per_level": 30,
-      "target_ratio": 0.3, "fixation_ms": 500, "iti_ms": 750, "time_limit_s": 300, "audio": "round1" }
-  ]
-}
-```
-
-`protocols/synapse_full_session.json` is a complete example. Parameter names and defaults are defined in
-`app/protocol.js` (`STEP_TYPES`).
-
-### Questionnaire file
-
-```json
-{ "id": "T1_ieq", "title": "…", "description": "…",
-  "sections": [ { "title": "THERMAL", "description": "",
-    "items": [ { "id": "thermal_sensation", "text": "What is your thermal sensation?", "type": "dropdown",
-                 "options": ["1: Cold", "2: Cool", "3: Neutral", "4: Warm", "5: Hot"], "required": true } ] } ] }
-```
-
-Item types: `single_choice`, `dropdown`, `checkboxes`, `scale` (`points`, `labels: [left, right]`), `text`, `number`. To reuse an existing Google Form, convert it
-with `tools/google_form_to_questionnaire.py` (instructions inside the script).
-
-## Data
-
-Each session downloads as one ZIP named `<participant>_<session>_<date>.zip` with four files:
-
-| File | One row per | Main columns |
-|---|---|---|
-| `…_trials.csv` | response | `participant_id, session_id, step_id, attempt, task, variant, block, trial`, stimulus columns (e.g. `stimulus, level, is_target, word, ink, emoji, condition, target, flanker, image, key_validity`), `correct_response, response, response_key, correct, rt_ms, soundscape, time, elapsed_ms`, `field_<session field>` |
-| `…_questionnaires.csv` | answer | `step_id, questionnaire_id, item_id, question, answer, code` (option number 1…k), `completion_ms, time` |
-| `…_events.csv` | event | step start/end (with reason: completed, continue, timeout, skip, exit), time limit reached, soundscape, n-back levels |
-| `…_session.json` | session | everything above, plus the protocol, the random seed, browser, screen and time zone |
-
-- `rt_ms` runs from the first painted frame of the stimulus, measured with `performance.now()`.
-- `time` is local time with UTC offset.
-- `attempt` counts restarts of a step after a resumed session.
-- The random seed reproduces every trial list of the session.
-
-## Relation to the SYNAPSE study
-
-Version 1 (2025) was a set of HTML pages that sent each response to Google Forms; the SYNAPSE dataset was recorded
-with it. Version 2 (this app) re-implements the same tasks with the same stimuli, instructions, trial generation rules
-and timings (fixation 500/750 ms; pause after response 750, 1000, 1000 and 500 ms for n-back, Stroop, flanker and
-visual tasks). The differences are listed in `CHANGELOG.md`. In the study:
-
-- The soundscapes were played from a separate device over headphones, not by the platform. The app can play them itself.
-- Trial numbers were later shortened per workstation (dataset decision D18). The built-in protocol uses the main
-  configuration: n-back 60 trials per level, Stroop 60, flanker 60, all visual images, 5-min time limits.
-
-## Media
-
-| Folder | Content | Origin |
-|---|---|---|
-| `media/images/visual_count/` | 13 counting images; the answer key is in the file name | AI-generated with OpenAI GPT-4o (ChatGPT); C2PA content credentials in each file |
-| `media/images/visual_shape/` | 14 shape-comparison images | AI-generated with Microsoft Designer Image Creator, 18 June 2025 (C2PA content credentials) |
-| `media/images/stroop_emotional/` | 30 emotional-word images + `generation_prompts.txt` | AI-generated with OpenAI GPT-4o (C2PA content credentials) |
-| `media/audio/cafeteria_babble_spectrum_noise.wav`, `road_traffic_spectrum_noise.wav` | substitutes for the two SYNAPSE soundscapes | made with `tools/make_spectrum_matched_noise.py`: stationary noise with the long-term spectrum, A-weighted level and interaural level difference of each original (all 1/3-octave bands 50 Hz–16 kHz within 4 dB) |
-| `media/backgrounds/` | page backgrounds (6) | AI-generated with OpenAI GPT-4o (C2PA content credentials in the originals); resized for the web |
-| `media/logos/` | University of Perugia, DTU, MuSIC, Marie Skłodowska-Curie Actions, *Funded by the European Union* | trademarks of their owners, shown as acknowledgement; not covered by the MIT licence |
-
-**Soundscapes.** The recordings used in the study (cafeteria babble, road traffic) were taken from YouTube and their
-source was not recorded, so they cannot be redistributed. The app ships the noise substitutes above; they reproduce
-the spectrum and level but not the content (speech, events) of the originals. To use real recordings, upload your
-own files in the Designer (*Soundscapes → Upload an audio file*). The originals are described in the SYNAPSE
-dataset (`stimuli/soundscapes.json`: checksum, duration, level distribution, 1/3-octave spectra).
-
-Two background images of the 2025 version were replaced: `img1.png` carried a third-party watermark and
-`baseline.jpeg` had no origin record.
-
-Answer-key quality: the SYNAPSE item review found that the counting images have no unambiguous count, and two shape
-images are identical files with opposite keys (`image3_same` = `image12_dif`). The app stores `key_validity` with each
-response and can restrict a visual step to the images with a verifiable key.
-
-## Tests
+**Run it on your own computer** (e.g. offline in a lab): download this repository and serve the folder with any static web server:
 
 ```bash
-deno test --allow-read tests/unit_test.js                              # trial generators, protocol checks, export
-pip install playwright && python -m playwright install chromium
-python tests/e2e_test.py                                               # full sessions in a real browser
+git clone https://github.com/tomarp/synapse-platform.git
+cd synapse-platform
+python3 -m http.server 8000      # then open http://localhost:8000
 ```
 
-## Project layout
+A five-minute walk-through is on the platform's **Guide** page. Protocol and questionnaire formats, the data dictionary and
+the test suite are described in the [documentation](docs/documentation.md).
 
+## 📚 Cite
+
+If you use SYNAPSE in your research, please cite the software:
+
+> Tomar, P. (2026). *SYNAPSE experiment platform* [Computer software]. Zenodo. https://doi.org/10.5281/zenodo.23768059
+
+<details>
+<summary>BibTeX</summary>
+
+```bibtex
+@software{tomar_2026_synapse_platform,
+  author    = {Tomar, Puneet},
+  title     = {{SYNAPSE} experiment platform},
+  year      = {2026},
+  publisher = {Zenodo},
+  doi       = {10.5281/zenodo.23768059}
+}
 ```
-index.html                 entry page
-app/                       application code (ES modules, no build step, no dependencies)
-  main.js                  routing; pages: start, demo, try-out/preview, data, guide, about
-  info.js                  version, author, citation
-  templates.js             designer templates
-  nav.js                   navigation bar
-  home.js                  home page (task previews, study timeline, partners)
-  audio_store.js           researchers' own soundscape files (browser storage)
-  designer.js              experiment designer
-  runner.js                runs a session: steps, time limits, soundscapes, logging, autosave
-  protocol.js              step types and their parameters, protocol checks
-  generators.js            trial lists (seeded, reproducible)
-  stimuli.js               stimulus lists and answer keys
-  export.js                CSV/JSON/ZIP export
-  storage.js               browser storage
-  tasks/                   one module per step type
-styles/app.css             layout, light and dark theme
-protocols/                 built-in protocols
-questionnaires/            built-in questionnaires (SYNAPSE T0, T1, T2/T3)
-media/                     images and soundscapes
-tools/                     Google Form → questionnaire converter; spectrum-matched noise generator
-tests/                     unit and browser tests
-```
+</details>
 
-## Related outputs
+Related outputs of the SYNAPSE study:
 
-- **Dataset** — Tomar, P., Dave, T., Wargocki, P., & Pisello, A. L. (2026). *SYNAPSE: EEG, wrist physiology, facial thermal
+- **Dataset**: Tomar, P., Dave, T., Wargocki, P., & Pisello, A. L. (2026). *SYNAPSE: EEG, wrist physiology, facial thermal
   imaging, indoor environment and cognitive performance of adults working under warm and cool LED lighting and urban
-  soundscapes* (Version 1.0.0) [Data set]. Zenodo. https://doi.org/10.5281/zenodo.23458777
-- **Software** (this platform) — Tomar, P. (2026). *SYNAPSE experiment platform* (Version 2.2.0) [Computer software].
-  Zenodo. https://doi.org/10.5281/zenodo.23768059
-- **Protocol** — Tomar, P., Dave, T., Wargocki, P., & Pisello, A. L. (2026). *Multimodal assessment of cognitive performance,
+  soundscapes* [Data set]. Zenodo. https://doi.org/10.5281/zenodo.23458777
+- **Protocol**: Tomar, P., Dave, T., Wargocki, P., & Pisello, A. L. (2026). *Multimodal assessment of cognitive performance,
   physiology and perceived indoor environment under warm and cool LED lighting and urban soundscapes (SYNAPSE)*.
   protocols.io. https://doi.org/10.17504/protocols.io.m7vznm25rvx1/v1
 
-The DOIs are kept in `app/info.js` (`REFERENCES`).
+GitHub's **Cite this repository** button (right sidebar) reads the same information from [`CITATION.cff`](CITATION.cff).
 
-## Author
+## 👤 Author
 
-Puneet Tomar — Environmental Applied Physics Lab at CIRIAF, Department of Engineering, University of Perugia, and
-Department of Environmental and Resource Engineering, Technical University of Denmark.
-[ORCID 0000-0002-5168-5471](https://orcid.org/0000-0002-5168-5471) · [E-mail](mailto:puneet.tomar@unipg.it) · [LinkedIn](https://www.linkedin.com/in/tomarp/)
+**Puneet Tomar**: Environmental Applied Physics Lab at CIRIAF, University of Perugia, and Department of Environmental
+and Resource Engineering, Technical University of Denmark.
 
-## Licence and citation
+[ORCID](https://orcid.org/0000-0002-5168-5471) · [E-mail](mailto:puneet.tomar@proton.me) · [LinkedIn](https://www.linkedin.com/in/tomarp/)
 
-Code: MIT (`LICENSE`). The images are AI-generated; the providers named above claim no ownership of the outputs.
-Logos: see *Media*. Please cite the software (`CITATION.cff`) and the SYNAPSE dataset.
+Questions, ideas and bug reports are welcome as [GitHub issues](https://github.com/tomarp/synapse-platform/issues).
+
+## 🇪🇺 Funding
+
+<img src="media/logos/eu_funded.png" alt="Funded by the European Union" height="44">
+
+This project has received funding from the European Union's Horizon Europe research and innovation programme under the
+Marie Skłodowska-Curie grant agreement No 101073357 (MuSIC).
+
+## 📄 License
+
+Code: [MIT](LICENSE). Task images and backgrounds are AI-generated (OpenAI GPT-4o, Microsoft Designer Image Creator).
+The soundscapes are spectrum-matched noise substitutes for the original study recordings. Logos belong to their owners.
+Details: [documentation → Media](docs/documentation.md#media) · [changelog](CHANGELOG.md).

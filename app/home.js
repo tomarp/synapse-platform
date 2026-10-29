@@ -81,7 +81,7 @@ export function renderHome(root, { author, paused }) {
         h('div', { class: 'hero-text reveal' },
           h('p', { class: 'eyebrow' }, h('span', { class: 'pulse' }), 'Open research software · SYNAPSE project'),
           h('p', { class: 'acronym' }, ...acronym(PROJECT_FULL)),
-          h('h1', {}, 'Cognitive experiments in the browser, ', h('span', { class: 'grad-text' }, 'from design to data.')),
+          h('h1', {}, 'Design, run and share cognitive experiments ', h('span', { class: 'grad-text' }, 'in any browser.')),
           h('p', { class: 'lead' }, 'Assemble a session from established task paradigms and questionnaires, run it on any laptop, and export ',
             'analysis-ready data. No installation, no server, and no participant data leaving your computer.'),
           h('div', { class: 'row hero-cta' },

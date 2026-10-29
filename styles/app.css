@@ -439,18 +439,24 @@ a.logo-tile:hover { transform: translateY(-2px); background: color-mix(in srgb, 
 .doi-badge span:last-child { background: #1682d4; color: #fff; padding: 3px 8px; }
 .doi-badge:hover { filter: brightness(1.1); }
 .cite-tools a { color: var(--muted); text-decoration: none; } .cite-tools a:hover { color: var(--accent); }
-.cite-frame { position: relative; flex: 1; border-radius: 12px; background: var(--panel-2); border: 1px solid var(--line); }
-.cite-text { margin: 0; padding: 16px 52px 16px 16px; white-space: pre-wrap; word-break: break-word; font-family: ui-monospace, Menlo, Consolas, monospace;
-  font-size: .84rem; line-height: 1.6; min-height: 120px; user-select: all; }
-.copy-btn { position: absolute; top: 10px; right: 10px; display: grid; place-items: center; width: 34px; height: 34px; border-radius: 9px; cursor: pointer;
+.cite-frame { position: relative; border-radius: 12px; background: var(--panel-2); border: 1px solid var(--line); overflow: hidden; }
+.cite-text { margin: 0; padding: 16px 56px 16px 16px; white-space: pre-wrap; word-break: break-word; font-family: ui-monospace, Menlo, Consolas, monospace;
+  font-size: .84rem; line-height: 1.6; height: 196px; overflow-y: auto; overscroll-behavior: contain; user-select: all;
+  scrollbar-width: thin; scrollbar-color: var(--line) transparent; }
+.cite-text::-webkit-scrollbar { width: 8px; } .cite-text::-webkit-scrollbar-thumb { background: var(--line); border-radius: 4px; }
+.cite-frame::after { content: ''; position: absolute; left: 0; right: 12px; bottom: 0; height: 22px; pointer-events: none;
+  background: linear-gradient(transparent, var(--panel-2)); }
+.copy-btn { position: absolute; top: 10px; right: 14px; z-index: 2; display: grid; place-items: center; width: 34px; height: 34px; border-radius: 9px; cursor: pointer;
   border: 1px solid var(--line); background: var(--panel); color: var(--muted); transition: color .15s, border-color .15s, background .15s; }
 .copy-btn svg { width: 18px; height: 18px; }
 .copy-btn:hover { color: var(--accent); border-color: var(--accent); }
 .copy-btn.done { color: #fff; background: var(--ok); border-color: var(--ok); }
-.copy-tip { position: absolute; top: 14px; right: 52px; font-size: .75rem; font-weight: 600; padding: 3px 8px; border-radius: 6px; background: var(--text); color: var(--bg);
+.copy-tip { position: absolute; top: 14px; right: 56px; z-index: 2; font-size: .75rem; font-weight: 600; padding: 3px 8px; border-radius: 6px; background: var(--text); color: var(--bg);
   opacity: 0; transform: translateX(6px); transition: opacity .15s, transform .15s; pointer-events: none; }
 .copy-tip.show { opacity: 1; transform: none; }
 .cite-foot { margin: 0; }
 
 .cite-card.kind-dataset { border-top: 3px solid var(--accent); } .cite-card.kind-protocol { border-top: 3px solid #0ea5a4; }
 .cite-card.kind-software { border-top: 3px solid var(--accent-2); }
+
+.hero h1 .grad-text { white-space: nowrap; }
