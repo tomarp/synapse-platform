@@ -17,8 +17,7 @@ export const AUTHOR = {
   linkedin: 'https://www.linkedin.com/in/tomarp/',
 };
 
-export const SOFTWARE_DOI = '10.5281/zenodo.23768059';          // concept DOI: always resolves to the latest version
-export const SOFTWARE_VERSION_DOI = '10.5281/zenodo.23768060';  // DOI of exactly this version (update with each release)
+export const SOFTWARE_DOI = '10.5281/zenodo.23768059';          // Zenodo DOI; always resolves to the latest version
 export const CITATION = `Tomar, P. (2026). SYNAPSE experiment platform (Version ${APP_VERSION}) [Computer software]. Zenodo. https://doi.org/${SOFTWARE_DOI}`;
 
 export const BIBTEX = `@software{tomar_2026_synapse_platform,

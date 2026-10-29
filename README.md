@@ -13,7 +13,7 @@ it (see *Relation to the SYNAPSE study*).
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23768059.svg)](https://doi.org/10.5281/zenodo.23768059)
 
-**Live:** https://synapse.ptomar.com · **DOI:** [10.5281/zenodo.23768059](https://doi.org/10.5281/zenodo.23768059) (all versions; v2.2.0: [10.5281/zenodo.23768060](https://doi.org/10.5281/zenodo.23768060)) · publishing steps: `PUBLISHING.md`
+**Live:** https://synapse.ptomar.com · **DOI:** [10.5281/zenodo.23768059](https://doi.org/10.5281/zenodo.23768059) · publishing steps: `PUBLISHING.md`
 
 ## Quick start
 

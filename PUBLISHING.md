@@ -71,14 +71,14 @@ Your main site (ptomar.com) is not affected. DNS changes usually take minutes, a
 
 ## Software DOI and new versions
 
-The software is archived on Zenodo: concept DOI **10.5281/zenodo.23768059** (all versions), v2.2.0 = 10.5281/zenodo.23768060.
+The software is archived on Zenodo under one DOI, **10.5281/zenodo.23768059**, which always resolves to the latest version.
 
 For a new version (e.g. 2.3.0):
-1. Update `APP_VERSION` and `SOFTWARE_VERSION_DOI` in `app/info.js`, the version in `CITATION.cff` and `.zenodo.json`,
+1. Update `APP_VERSION` in `app/info.js`, the version in `CITATION.cff` and `.zenodo.json`,
    and `CHANGELOG.md`; commit and push.
 2. Create the GitHub release: `gh release create v2.3.0 --title "SYNAPSE experiment platform v2.3.0" --notes "…"`.
-3. On zenodo.org open the record → **New version** → upload the release ZIP from GitHub → publish. This keeps the
-   same concept DOI and adds a version DOI.
+3. On zenodo.org open the record → **New version** → upload the release ZIP from GitHub → publish. The DOI above then
+   points to the new version automatically.
 
 Do **not** switch on Zenodo's GitHub integration for this repository: the repository was recreated on 2026-10-29, and
 Zenodo would treat it as a new project and start a second DOI series.

@@ -1,6 +1,6 @@
 // Start page: what the platform does, the tasks (live previews, one-minute try-outs), the SYNAPSE study,
 // how it works, privacy, funders and citation.
-import { APP_VERSION, BIBTEX, CITATION, doiUrl, PROJECT_FULL, REFERENCES, RIS, SOFTWARE_DOI, SOFTWARE_VERSION_DOI } from './info.js';
+import { BIBTEX, CITATION, doiUrl, PROJECT_FULL, REFERENCES, RIS, SOFTWARE_DOI } from './info.js';
 import { footer, nav } from './nav.js';
 import { socialLinks } from './social.js';
 import { COLOURS, logoTiles, STROOP_EMOTIONAL, VISUAL_COUNT, VISUAL_SHAPE } from './stimuli.js';
@@ -186,15 +186,13 @@ export function citeCard() {
       text.textContent = value;
       tabs.querySelectorAll('.tab').forEach((x) => x.classList.toggle('on', x === e.currentTarget));
     } }, label)));
-  const badge = h('a', { class: 'doi-badge', href: doiUrl(SOFTWARE_DOI), target: '_blank', rel: 'noopener', title: 'Zenodo record (all versions)' },
+  const badge = h('a', { class: 'doi-badge', href: doiUrl(SOFTWARE_DOI), target: '_blank', rel: 'noopener', title: 'Zenodo record' },
     h('span', {}, 'DOI'), h('span', {}, SOFTWARE_DOI));
   return h('div', { class: 'card cite-card' },
     h('div', { class: 'row space' }, h('div', { class: 'card-label' }, 'Cite this software'), badge),
     h('div', { class: 'row space cite-tools' }, tabs, h('a', { class: 'small', href: 'CITATION.cff', download: 'CITATION.cff' }, '⬇ CITATION.cff')),
     h('div', { class: 'cite-frame' }, text, copy, tip),
-    h('p', { class: 'muted small cite-foot' }, `Citing the exact version you used (v${APP_VERSION})? Use `,
-      h('a', { href: doiUrl(SOFTWARE_VERSION_DOI), target: '_blank', rel: 'noopener' }, SOFTWARE_VERSION_DOI),
-      '. Please also cite the dataset and protocol below.'));
+    h('p', { class: 'muted small cite-foot' }, 'Please also cite the dataset and protocol below.'));
 }
 
 export function referenceList() {
