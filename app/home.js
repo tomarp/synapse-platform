@@ -201,7 +201,7 @@ function citeSection(author) {
   return h('section', { class: 'band alt', id: 'cite' },
     h('div', { class: 'section-head reveal' }, h('p', { class: 'kicker' }, 'Open science'), h('h2', {}, 'Cite SYNAPSE'),
       h('p', { class: 'muted' }, 'The platform, the dataset and the experimental protocol are published openly. Please cite the ones you use.')),
-    h('div', { class: 'cite-grid three reveal' }, citeCard(), ...OUTPUTS.slice(1).map((o) => citationCard(o))));
+    h('div', { class: 'cite-grid reveal' }, citeCard(), ...OUTPUTS.slice(1).map((o) => citationCard(o))));
 }
 
 /** "SYnergistic Neurophysiological …" with the letters of the acronym highlighted. */
