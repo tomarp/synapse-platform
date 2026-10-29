@@ -123,6 +123,9 @@ Each session downloads as one ZIP named `<participant>_<session>_<date>.zip` wit
 
 ## Relation to the SYNAPSE study
 
+SYNAPSE (Synergistic Neurophysiological Assessment of Perception in Sensory Environments) is a multi-domain indoor-environmental-quality study (DTU, June 2025). Protocol: https://doi.org/10.17504/protocols.io.m7vznm25rvx1/v1 · dataset: https://doi.org/10.5281/zenodo.23458777 · this software: https://doi.org/10.5281/zenodo.23768059.
+
+
 Version 1 (2025) was a set of HTML pages that sent each response to Google Forms; the SYNAPSE dataset was recorded
 with it. Version 2 (this app) re-implements the same tasks with the same stimuli, instructions, trial generation rules
 and timings (fixation 500/750 ms; pause after response 750, 1000, 1000 and 500 ms for n-back, Stroop, flanker and
