@@ -273,7 +273,7 @@ function about() {
     h('h2', {}, 'Related research outputs'), referenceList(),
     h('section', { class: 'card' },
       h('h2', {}, 'The software'),
-      h('p', {}, `SYNAPSE (${PROJECT_FULL}) experiment platform, version ${APP_VERSION}. It grew out of the task platform used in the SYNAPSE study `,
+      h('p', {}, `SYNAPSE (${PROJECT_FULL}) experiment platform. It grew out of the task platform used in the SYNAPSE study `,
         '(Technical University of Denmark, June 2025) and is now an open tool for cognitive experiments in indoor-environment research and beyond. ',
         'The built-in "SYNAPSE full session" reproduces the tasks, trial numbers, timings and questionnaires of the study.'),
       h('h3', {}, 'Privacy'),

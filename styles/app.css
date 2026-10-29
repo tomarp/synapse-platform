@@ -451,3 +451,6 @@ a.logo-tile:hover { transform: translateY(-2px); background: color-mix(in srgb, 
   opacity: 0; transform: translateX(6px); transition: opacity .15s, transform .15s; pointer-events: none; }
 .copy-tip.show { opacity: 1; transform: none; }
 .cite-foot { margin: 0; }
+
+.cite-card.kind-dataset { border-top: 3px solid var(--accent); } .cite-card.kind-protocol { border-top: 3px solid #0ea5a4; }
+.cite-card.kind-software { border-top: 3px solid var(--accent-2); }

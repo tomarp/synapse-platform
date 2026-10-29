@@ -1,6 +1,6 @@
 // Start page: what the platform does, the tasks (live previews, one-minute try-outs), the SYNAPSE study,
 // how it works, privacy, funders and citation.
-import { BIBTEX, CITATION, doiUrl, PROJECT_FULL, REFERENCES, RIS, SOFTWARE_DOI } from './info.js';
+import { doiUrl, OUTPUTS, PROJECT_FULL } from './info.js';
 import { footer, nav } from './nav.js';
 import { socialLinks } from './social.js';
 import { COLOURS, logoTiles, STROOP_EMOTIONAL, VISUAL_COUNT, VISUAL_SHAPE } from './stimuli.js';
@@ -167,11 +167,10 @@ export function authorCard(author) {
 const COPY_ICON = '<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M8 3h9a2 2 0 0 1 2 2v11h-2V5H8V3Zm-3 4h9a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2Zm0 2v11h9V9H5Z"/></svg>';
 const CHECK_ICON = '<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M9.5 16.2 5.3 12l-1.4 1.4 5.6 5.6L20.1 8.4 18.7 7z"/></svg>';
 
-/** Citation of the software: Zenodo DOI badge, APA / BibTeX / RIS, copy button inside the frame. */
-export function citeCard() {
-  const FORMATS = { apa: ['APA', CITATION], bibtex: ['BibTeX', BIBTEX], ris: ['RIS', RIS] };
-  const text = h('pre', { class: 'cite-text' }, CITATION);
-  const copy = h('button', { class: 'copy-btn', title: 'Copy citation', 'aria-label': 'Copy citation' });
+/** Citation box (same for software, dataset, protocol): DOI badge, APA / BibTeX / RIS, copy button inside the frame. */
+export function citationCard(o, label = `Cite the ${o.kind.toLowerCase()}`) {
+  const text = h('pre', { class: 'cite-text' }, o.cite.apa);
+  const copy = h('button', { class: 'copy-btn', title: 'Copy citation', 'aria-label': `Copy ${o.kind.toLowerCase()} citation` });
   copy.innerHTML = COPY_ICON;
   const tip = h('span', { class: 'copy-tip' }, 'Copied');
   copy.addEventListener('click', async () => {
@@ -181,28 +180,22 @@ export function citeCard() {
     copy.innerHTML = CHECK_ICON; copy.classList.add('done'); tip.classList.add('show');
     setTimeout(() => { copy.innerHTML = COPY_ICON; copy.classList.remove('done'); tip.classList.remove('show'); }, 1600);
   });
-  const tabs = h('div', { class: 'tabs', role: 'tablist' }, ...Object.entries(FORMATS).map(([k, [label, value]]) =>
+  const tabs = h('div', { class: 'tabs', role: 'tablist' }, ...[['apa', 'APA'], ['bibtex', 'BibTeX'], ['ris', 'RIS']].map(([k, name]) =>
     h('button', { class: `tab ${k === 'apa' ? 'on' : ''}`, role: 'tab', onclick: (e) => {
-      text.textContent = value;
+      text.textContent = o.cite[k];
       tabs.querySelectorAll('.tab').forEach((x) => x.classList.toggle('on', x === e.currentTarget));
-    } }, label)));
-  const badge = h('a', { class: 'doi-badge', href: doiUrl(SOFTWARE_DOI), target: '_blank', rel: 'noopener', title: 'Zenodo record' },
-    h('span', {}, 'DOI'), h('span', {}, SOFTWARE_DOI));
-  return h('div', { class: 'card cite-card' },
-    h('div', { class: 'row space' }, h('div', { class: 'card-label' }, 'Cite this software'), badge),
-    h('div', { class: 'row space cite-tools' }, tabs, h('a', { class: 'small', href: 'CITATION.cff', download: 'CITATION.cff' }, '⬇ CITATION.cff')),
+    } }, name)));
+  const badge = h('a', { class: 'doi-badge', href: doiUrl(o.doi), target: '_blank', rel: 'noopener', title: `Open on ${o.where}` },
+    h('span', {}, 'DOI'), h('span', {}, o.doi));
+  return h('div', { class: `card cite-card kind-${o.kind.toLowerCase()}` },
+    h('div', { class: 'row space' }, h('div', { class: 'card-label' }, label), badge),
+    h('div', { class: 'row space cite-tools' }, tabs, h('span', { class: 'muted small' }, o.where)),
     h('div', { class: 'cite-frame' }, text, copy, tip),
-    h('p', { class: 'muted small cite-foot' }, 'Please also cite the dataset and protocol below.'));
+    h('p', { class: 'muted small cite-foot' }, o.note));
 }
 
-export function referenceList() {
-  return h('div', { class: 'ref-grid' }, ...REFERENCES.filter((r) => r.kind !== 'Software').map((r) => h('div', { class: 'card ref-card' },
-    h('div', { class: 'row space' }, h('span', { class: `ref-kind ${r.kind.toLowerCase()}` }, r.kind), h('span', { class: 'muted small' }, r.where)),
-    h('p', { class: 'ref-text' }, r.text),
-    h('p', { class: 'muted small' }, r.note),
-    r.doi ? h('a', { class: 'btn small', href: doiUrl(r.doi), target: '_blank', rel: 'noopener' }, `DOI ${r.doi} ↗`)
-      : h('span', { class: 'doi-pending' }, 'DOI assigned on publication'))));
-}
+export const citeCard = () => citationCard(OUTPUTS[0], 'Cite this software');
+export const referenceList = () => h('div', { class: 'cite-grid' }, ...OUTPUTS.slice(1).map((o) => citationCard(o)));
 
 function citeSection(author) {
   return h('section', { class: 'band alt', id: 'cite' },
